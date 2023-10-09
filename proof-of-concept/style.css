@@ -452,6 +452,9 @@ body {
   z-index: 999;
 }
 
+.iphone .screen .content #map {
+  height: 70%;
+}
 
 /*  Navigation bar */
 .iphone .screen .content .navigation-bar{
