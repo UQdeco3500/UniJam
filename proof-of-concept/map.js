@@ -103,6 +103,10 @@ function heatMapData() {
     ];
 }
 
+function filterToggle() {
+    
+}
+
 window.displayMap = displayMap;
 
 
