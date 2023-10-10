@@ -1,6 +1,6 @@
 
 // code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation 
-let map, infoWindow;
+let map, infoWindow, marker;
 
 function displayMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -23,9 +23,23 @@ function displayMap() {
                 };
 
                 infoWindow.setPosition(pos);
-                infoWindow.setContent("Current location");
-                infoWindow.open(map);
+                // infoWindow.setContent("Current location");
+                // infoWindow.open(map);
                 map.setCenter(pos);
+                // add current location marker
+                let marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 10,
+                        fillOpacity: 1,
+                        strokeWeight: 2,
+                        fillColor: '#5384ED',
+                        strokeColor: '#ffffff',
+                    }
+                });
+                infoWindow.setContent(marker);
             },
             () => {
                 handleLocationError(true, infoWindow, map.getCenter());
