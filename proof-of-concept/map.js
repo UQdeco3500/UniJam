@@ -1,3 +1,4 @@
+
 // code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation 
 let map, infoWindow, marker;
 
