@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:100");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap');
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -561,10 +563,29 @@ body {
 
 /* sign up screen */
 #sign-up {
-  /* background: #3EC6FF; */
   height: 100%;
   width: 75%;
-  margin-top: 40vh;
+  margin-top: 20vh;
+}
+
+#sign-up .logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up .logo .background-circle {
+  background: #3EC6FF;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  border-radius: 70px;
+}
+
+#sign-up .logo .logo-image {
+  /* background: black; */
+  position: absolute;
 }
 
 #sign-up .login .login-heading {
@@ -603,6 +624,39 @@ body {
   color: white;
   font-size: 16px;
   border: 1px white solid;
+}
+
+#sign-up .or {
+  text-align: center;
+}
+
+#sign-up .signup {
+  text-align: center;
+}
+
+#sign-up .signup a {
+  color: #3EC6FF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#sign-up .signup .social-media-signin {
+  width: 90%;
+  display: inline;
+}
+
+#sign-up .social-media-signin .instagram img, #sign-up .social-media-signin .facebook img, #sign-up .social-media-signin .x img{
+  width: 65px;
+  height: 65px;
+}
+
+#sign-up .social-media-signin .instagram, #sign-up .social-media-signin .facebook, #sign-up .social-media-signin .x {
+  border: none;
+  background: none;
+}
+
+#sign-up .social-media-signin .x img {
+  border-radius: 17px;
 }
 /* ----------------------------------- */
 
