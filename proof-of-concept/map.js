@@ -25,7 +25,7 @@ function displayMap() {
                 infoWindow.setPosition(pos);
                 map.setCenter(pos);
 
-                // add current location marker
+                // add current location marker --------------------
                 marker = new google.maps.Marker({
                     position: pos,
                     map: map,
@@ -38,13 +38,14 @@ function displayMap() {
                         strokeColor: '#ffffff',
                     }
                 });
+                // -----------------------------------------------
             },
             () => {
                 handleLocationError(true, infoWindow, map.getCenter());
             },
         );
         
-        // set heatmap
+        // set heatmap --------------------------------------------
         heatmap = new google.maps.visualization.HeatmapLayer({
             data: heatMapData(),
             map: map,
@@ -70,9 +71,8 @@ function displayMap() {
         heatmap.set("gradient", gradient);
         heatmap.set("radius", 40);
         heatmap.set("opacity", 0.7);
-
-        // console.log(heatmap.getMap());
         heatmap.setMap(map);
+        // --------------------------------------------------------
         
     } else {
         // Browser doesn't support Geolocation
@@ -88,6 +88,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+// heat map data
 function heatMapData() {
     return [
         new google.maps.LatLng(-27.49708, 153.01364),
