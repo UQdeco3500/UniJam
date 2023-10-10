@@ -557,9 +557,54 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 34px; /* 166.667% */
-  
 }
 
+/* sign up screen */
+#sign-up {
+  /* background: #3EC6FF; */
+  height: 100%;
+  width: 75%;
+  margin-top: 40vh;
+}
+
+#sign-up .login .login-heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+#sign-up .login label {
+  font-size: 17px;
+  font-weight: bold !important;
+  margin-left: 5px;
+}
+
+#sign-up .login input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ECF9FF;
+}
+
+#sign-up .login .input {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#sign-up .login .button {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #3EC6FF;
+  border-radius: 17px;
+  height: 6vh;
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  border: 1px white solid;
+}
+/* ----------------------------------- */
 
 /* Tab bar */
 .iphone .screen .content .tab-bar{
