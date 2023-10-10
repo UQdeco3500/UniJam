@@ -9,6 +9,7 @@ function displayMap() {
             lng: 153.01364,
         }, 
         zoom: 17,
+        disableDefaultUI: true,
     });
     infoWindow = new google.maps.InfoWindow();
 
