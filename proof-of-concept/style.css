@@ -560,9 +560,10 @@ body {
 }
 
 /* sign up screen */
-.iphone .screen .content #sign-up {
+#sign-up {
   /* background: #3EC6FF; */
-  height: 100vh;
+  height: 100%;
+  width: 75%;
   margin-top: 40vh;
 }
 
@@ -578,7 +579,7 @@ body {
 }
 
 #sign-up .login input[type=text] {
-  width: 40vw;
+  width: 100%;
   padding: 10px;
   border: none;
   border-radius: 15px;
@@ -594,11 +595,11 @@ body {
   text-align: center;
 }
 
-#sign-up .login .button .login-button {
+.login-button {
   background-color: #3EC6FF;
   border-radius: 17px;
   height: 6vh;
-  width:17vw;
+  width: 50%;
   color: white;
   font-size: 16px;
   border: 1px white solid;
