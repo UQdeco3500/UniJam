@@ -2,6 +2,9 @@
 // code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation 
 let map, infoWindow, marker, heatmap;
 
+/**
+ * Function to display the map screen. 
+ */
 function displayMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: {
@@ -90,6 +93,26 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 
 // heat map data
 function heatMapData() {
+
+    var currentEvents = [
+        // School of Chemistry
+        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    ]
+    
+    var upcomingEvents = [
+        // General Purpose North
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        // Advanced Engineering
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    ]
+
     return [
         // UQ
         new google.maps.LatLng(-27.49708, 153.01364),
@@ -131,6 +154,5 @@ function activeFunction() {
     // console.log("element:", element.classList);
     element.classList.remove("filter-normal");
     element.classList.toggle("filter-press");
-
-  }
-
+    
+}

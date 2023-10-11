@@ -51,9 +51,18 @@
           <circle cx="13.5" cy="28.5" r="3" fill="white" stroke="#404040"/>
           </svg>
                       </div>
-                      <div id="unselect-filter" onclick="onclickFunction()" class="filter-label filter-press">What's on today</div>
-                      <div id="actived-filter" onclick="activeFunction()" class="filter-label filter-normal">Upcoming events</div>
-                      
+                      <!-- <div id="unselect-filter" onclick="onclickFunction()" class="filter-label filter-press">What's on today</div>
+                      <div id="actived-filter" onclick="activeFunction()" class="filter-label">Upcoming events</div> -->
+                      <!-- <div id="current-events" onclick="activateFilter(this.id)" class="filter-label">What's on today</div>
+                      <div id="upcoming-events" onclick="activateFilter(this.id)" class="filter-label">Upcoming events</div> -->
+
+                      <div class="events-filter">
+                        <input type="radio" name="events" id="current-events"><label for="current-events">What's on today</label>
+                      </div>
+                      <div class="events-filter">
+                        <input type="radio" name="events" id="upcoming-events"><label for="upcoming-events">Upcoming events</label>
+                      </div>
+
                     </div>
                     </div>
                     <!-- End of navigation bar -->
