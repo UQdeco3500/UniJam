@@ -813,7 +813,102 @@ body {
   } */
 
 }
+#listView {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.listView {
+  height: 60%;
+  bottom: 20%;
+}
+
+
+#boxList {
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  /*width: 390px;*/
+  background-color: #FFFFFF;
+  color: #fff;
+  height: 385px;
+  padding: 1px;
+  position: relative;
+  display: flex; /* Display image and content in a row */
+  flex-wrap: wrap;
+  /* Vertically align image and content */
+}
+
+.header {
+  display: flex; /* Use flexbox for side-by-side layout */
+  align-items: flex-start; /* Vertically align items */
+  height: 5%;
+}
+
+.header img {
+  /*Set the width of the logo as needed */
+  /* Maintain aspect ratio */
+  margin-left: 5%; /* Add spacing between the logo and text */
+  margin-top: 5%;
+}
+
+.header h4 {
+  margin-left: 15px; /* Remove default margin on the heading */
+  color: #000;
+  bottom: 5%;
+  white-space: nowrap;
+}
+
+.poster {
+  width: auto; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  align-self: center;
+  margin-top: 10%;
+}
+
+.eventInfo {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.eventInfo h6{
+  color: #3EC6FF;
+
+}
+
+.eventInfo h4{
+  color: #000;
+  white-space: nowrap; 
+}
+
+
+.line {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  right: 0;
+  height: 1px; /* Adjust the line's height as needed */
+  background-color: #525151; /* Adjust the line's color as needed */
+}
+
+.book-button {
+  background-color: #3EC6FF;
+  ;
+  color: #fff;
+  text-decoration: none;  /*Remove underline for links */
+  padding: 5px 10px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  align-self: self-end;
+  border-radius: 32px;
+}
+
+.book-button:hover {
+  background-color: #c0392b; /* Change color on hover */
+}
 
 
 
