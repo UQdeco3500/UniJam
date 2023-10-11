@@ -115,4 +115,21 @@ function filterToggle() {
 
 window.displayMap = displayMap;
 
+// onclick filter
+function onclickFunction() {
+
+    var element = document.getElementById("unselect-filter");
+    // console.log("element:", element.classList);
+    element.classList.toggle("filter-normal");
+
+  }
+
+function activeFunction() {
+
+    var element = document.getElementById("actived-filter");
+    // console.log("element:", element.classList);
+    element.classList.remove("filter-normal");
+    element.classList.toggle("filter-press");
+
+  }
 
