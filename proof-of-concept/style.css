@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Heebo:100");
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@600&display=swap');
+
 
 html {
   -webkit-box-sizing: border-box;
@@ -644,9 +646,112 @@ body {
   border: 1px solid #EAE9E9;
   background: #FFF;
   color: #404040;
-
+  text-align: center;
+/*   font-family: Roboto; */
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 166.667% */
 }
 
+/* sign up screen */
+#sign-up {
+  height: 100%;
+  width: 75%;
+  margin-top: 20vh;
+}
+
+#sign-up .logo {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up .logo .background-circle {
+  background: #3EC6FF;
+  height: 120px;
+  width: 120px;
+  position: relative;
+  border-radius: 70px;
+}
+
+#sign-up .logo .logo-image {
+  /* background: black; */
+  position: absolute;
+}
+
+#sign-up .login .login-heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+#sign-up .login label {
+  font-size: 17px;
+  font-weight: bold !important;
+  margin-left: 5px;
+}
+
+#sign-up .login input[type=text] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #ECF9FF;
+}
+
+#sign-up .login .input {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#sign-up .login .button {
+  text-align: center;
+}
+
+.login-button {
+  background-color: #3EC6FF;
+  border-radius: 17px;
+  height: 6vh;
+  width: 50%;
+  color: white;
+  font-size: 16px;
+  border: 1px white solid;
+}
+
+#sign-up .or {
+  text-align: center;
+}
+
+#sign-up .signup {
+  text-align: center;
+}
+
+#sign-up .signup a {
+  color: #3EC6FF;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#sign-up .signup .social-media-signin {
+  width: 90%;
+  display: inline;
+}
+
+#sign-up .social-media-signin .instagram img, #sign-up .social-media-signin .facebook img, #sign-up .social-media-signin .x img{
+  width: 65px;
+  height: 65px;
+}
+
+#sign-up .social-media-signin .instagram, #sign-up .social-media-signin .facebook, #sign-up .social-media-signin .x {
+  border: none;
+  background: none;
+}
+
+#sign-up .social-media-signin .x img {
+  border-radius: 17px;
+}
+/* ----------------------------------- */
 
 /* Tab bar */
 .iphone .screen .content .tab-bar {
