@@ -91,19 +91,20 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 // heat map data
 function heatMapData() {
     return [
+        // UQ
         new google.maps.LatLng(-27.49708, 153.01364),
         new google.maps.LatLng(-27.49708, 153.01364),
-        new google.maps.LatLng(-27.5, 153.1),
-        new google.maps.LatLng(-27.5243, 153.1234),
-        new google.maps.LatLng(-27.58792, 153.0567),
+        // General Purpose North
         new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
         new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
         new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
         new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        // Advanced Engineering
         new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
         new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
         new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
         new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        // School of Chemistry
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
     ];
