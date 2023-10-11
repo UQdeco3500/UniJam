@@ -1,7 +1,29 @@
+function activeFunction() {
+
+    const currentUrl = new URL(window.location.href);
+    const params = new URLSearchParams(currentUrl.search);
+
+    let currentEventsFilter = document.getElementById("current-events");
+    let upcomingEventsFilter = document.getElementById("upcoming-events");
+
+    if (currentEventsFilter.checked) {
+        currentUrl.searchParams.set('filter', 'current-events');
+    } else if (upcomingEventsFilter.checked) {
+        currentUrl.searchParams.set('filter', 'upcoming-events');
+    }
+    window.history.replaceState(null, null, currentUrl);
+
+    // if (document.URL)
+    
+}
+
 
 // code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation 
 let map, infoWindow, marker, heatmap;
 
+/**
+ * Function to display the map screen. 
+ */
 function displayMap() {
     map = new google.maps.Map(document.getElementById("map"), {
         center: {
@@ -47,7 +69,7 @@ function displayMap() {
         
         // set heatmap --------------------------------------------
         heatmap = new google.maps.visualization.HeatmapLayer({
-            data: heatMapData(),
+            data: heatMapData(window.location.href),
             map: map,
         });
 
@@ -69,7 +91,7 @@ function displayMap() {
         ];
 
         heatmap.set("gradient", gradient);
-        heatmap.set("radius", 40);
+        heatmap.set("radius", 80);
         heatmap.set("opacity", 0.7);
         heatmap.setMap(map);
         // --------------------------------------------------------
@@ -88,49 +110,68 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     infoWindow.open(map);
 }
 
+console.log(window.location.href.includes("filter=current-events"));
+
 // heat map data
-function heatMapData() {
-    return [
-        new google.maps.LatLng(-27.49708, 153.01364),
-        new google.maps.LatLng(-27.49708, 153.01364),
-        new google.maps.LatLng(-27.5, 153.1),
-        new google.maps.LatLng(-27.5243, 153.1234),
-        new google.maps.LatLng(-27.58792, 153.0567),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+function heatMapData(url) {
+
+    var currentEvents = [
+        // School of Chemistry
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-
-    ];
-}
-
-function filterToggle() {
+        // General Purpose North
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    ]
     
+    var upcomingEvents = [
+        // UQ
+        new google.maps.LatLng(-27.49708, 153.01364),
+        new google.maps.LatLng(-27.49708, 153.01364),
+        // Advanced Engineering
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    ]
+
+    if (url.includes("filter=current-events")) {
+        return currentEvents;
+    } else if (url.includes("filter=upcoming-events")) {
+        return upcomingEvents;
+    }
+
+    // return [
+    //     // UQ
+    //     new google.maps.LatLng(-27.49708, 153.01364),
+    //     new google.maps.LatLng(-27.49708, 153.01364),
+    //     // General Purpose North
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     // Advanced Engineering
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     // School of Chemistry
+    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    // ];
 }
+// ---End of code retrieved from https://developers.google.com/maps/documentation/javascript/geolocation---
+
 
 window.displayMap = displayMap;
 
+
 // onclick filter
-function onclickFunction() {
+// function onclickFunction() {
+//     var element = document.getElementById("unselect-filter");
+//     // console.log("element:", element.classList);
+//     element.classList.toggle("filter-normal");
 
-    var element = document.getElementById("unselect-filter");
-    // console.log("element:", element.classList);
-    element.classList.toggle("filter-normal");
-
-  }
-
-function activeFunction() {
-
-    var element = document.getElementById("actived-filter");
-    // console.log("element:", element.classList);
-    element.classList.remove("filter-normal");
-    element.classList.toggle("filter-press");
-
-  }
-
+// }
