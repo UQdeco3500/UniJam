@@ -69,7 +69,7 @@ function displayMap() {
         ];
 
         heatmap.set("gradient", gradient);
-        heatmap.set("radius", 40);
+        heatmap.set("radius", 80);
         heatmap.set("opacity", 0.7);
         heatmap.setMap(map);
         // --------------------------------------------------------
@@ -106,7 +106,6 @@ function heatMapData() {
         new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
         new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-
     ];
 }
 
