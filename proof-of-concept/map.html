@@ -57,10 +57,10 @@
                       <div id="upcoming-events" onclick="activateFilter(this.id)" class="filter-label">Upcoming events</div> -->
 
                       <div class="events-filter">
-                        <input type="radio" name="events" id="current-events"><label for="current-events">What's on today</label>
+                        <input type="radio" name="events" id="current-events" onchange="activeFunction()" checked><label for="current-events">What's on today</label>
                       </div>
                       <div class="events-filter">
-                        <input type="radio" name="events" id="upcoming-events"><label for="upcoming-events">Upcoming events</label>
+                        <input type="radio" name="events" id="upcoming-events" onchange="activeFunction()"><label for="upcoming-events">Upcoming events</label>
                       </div>
 
                     </div>
