@@ -654,6 +654,28 @@ body {
   line-height: 34px; /* 166.667% */
 }
 
+.events-filter {
+  margin-left: 10px;
+}
+
+.events-filter input[type="radio"] {
+  appearance: none;
+}
+
+.events-filter input[type="radio"] + label  {
+  padding: 10px;
+  background:#FFF;
+  color: #404040;
+  border: 1px solid #EAE9E9;
+  border-radius: 20px;
+}
+
+.events-filter input[type="radio"]:checked + label {
+  background:rgba(62, 198, 255, 0.10);
+  color: #3EC6FF;
+  border: 1px solid #3EC6FF;
+}
+
 /* sign up screen */
 #sign-up {
   height: 100%;
