@@ -1,3 +1,7 @@
+const url = new URL(window.location.href);
+url.searchParams.set('filter', 'current-events');
+window.history.replaceState(null, null, url);
+
 const gradient = [
     "rgba(0, 255, 255, 0)",
     "rgba(0, 255, 255, 1)",
@@ -28,6 +32,7 @@ function activeFunction() {
     } else if (upcomingEventsFilter.checked) {
         currentUrl.searchParams.set('filter', 'upcoming-events');
     }
+
     window.history.replaceState(null, null, currentUrl);
     setHeatMap();
 
