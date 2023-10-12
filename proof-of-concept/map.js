@@ -1,9 +1,35 @@
+const url = new URL(window.location.href);
+url.searchParams.set('filter', 'current-events');
+window.history.replaceState(null, null, url);
+
+const gradient = [
+    "rgba(0, 255, 255, 0)",
+    "rgba(0, 255, 255, 1)",
+    "rgba(0, 191, 255, 1)",
+    "rgba(0, 127, 255, 1)",
+    "rgba(0, 63, 255, 1)",
+    "rgba(0, 0, 255, 1)",
+    "rgba(0, 0, 223, 1)",
+    "rgba(0, 0, 191, 1)",
+    "rgba(0, 0, 159, 1)",
+    "rgba(0, 0, 127, 1)",
+    "rgba(63, 0, 91, 1)",
+    "rgba(127, 0, 63, 1)",
+    "rgba(191, 0, 31, 1)",
+    "rgba(255, 0, 0, 1)",
+];
+
 function activeFunction() {
   const currentUrl = new URL(window.location.href);
   const params = new URLSearchParams(currentUrl.search);
 
+
   let currentEventsFilter = document.getElementById("current-events");
   let upcomingEventsFilter = document.getElementById("upcoming-events");
+
+  const currentUrl = new URL(window.location.href);
+  console.log(currentUrl);
+
 
   if (currentEventsFilter.checked) {
     currentUrl.searchParams.set("filter", "current-events");
@@ -13,6 +39,30 @@ function activeFunction() {
   window.history.replaceState(null, null, currentUrl);
 
   // if (document.URL)
+
+    if (currentEventsFilter.checked) {
+        currentUrl.searchParams.set('filter', 'current-events');
+    } else if (upcomingEventsFilter.checked) {
+        currentUrl.searchParams.set('filter', 'upcoming-events');
+    }
+
+    window.history.replaceState(null, null, currentUrl);
+    setHeatMap();
+
+}
+
+function setHeatMap() {
+    heatmap.setMap(null);
+    heatmap = new google.maps.visualization.HeatmapLayer({
+        data: heatMapData(window.location.href),
+        map: map,
+    });
+
+    heatmap.set("gradient", gradient);
+    heatmap.set("radius", 80);
+    heatmap.set("opacity", 0.7);
+    heatmap.setMap(map);
+
 }
 
 // code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation
@@ -70,6 +120,7 @@ function displayMap() {
       map: map,
     });
 
+
     const gradient = [
       "rgba(0, 255, 255, 0)",
       "rgba(0, 255, 255, 1)",
@@ -96,6 +147,18 @@ function displayMap() {
     // Browser doesn't support Geolocation
     handleLocationError(false, infoWindow, map.getCenter());
   }
+
+        heatmap.set("gradient", gradient);
+        heatmap.set("radius", 80);
+        heatmap.set("opacity", 0.7);
+        heatmap.setMap(map);
+        // --------------------------------------------------------
+        
+    } else {
+        // Browser doesn't support Geolocation
+        handleLocationError(false, infoWindow, map.getCenter());
+    }
+
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -108,10 +171,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-console.log(window.location.href.includes("filter=current-events"));
-
 // heat map data
 function heatMapData(url) {
+
   var currentEvents = [
     // School of Chemistry
     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
@@ -158,6 +220,55 @@ function heatMapData(url) {
   //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
   //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
   // ];
+
+    var currentEvents = [
+        // School of Chemistry
+        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+        // General Purpose North
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    ]
+    
+    var upcomingEvents = [
+        // UQ
+        new google.maps.LatLng(-27.49708, 153.01364),
+        new google.maps.LatLng(-27.49708, 153.01364),
+        // Advanced Engineering
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    ]
+
+    if (url.includes("filter=current-events")) {
+        console.log(url);
+        return currentEvents;
+    } else if (url.includes("filter=upcoming-events")) {
+        return upcomingEvents;
+    }
+
+    // return [
+    //     // UQ
+    //     new google.maps.LatLng(-27.49708, 153.01364),
+    //     new google.maps.LatLng(-27.49708, 153.01364),
+    //     // General Purpose North
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    //     // Advanced Engineering
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    //     // School of Chemistry
+    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    // ];
+
 }
 // ---End of code retrieved from https://developers.google.com/maps/documentation/javascript/geolocation---
 
