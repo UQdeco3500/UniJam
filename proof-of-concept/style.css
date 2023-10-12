@@ -698,7 +698,6 @@ body {
 }
 
 #sign-up .logo .logo-image {
-  /* background: black; */
   position: absolute;
 }
 
@@ -812,6 +811,8 @@ body {
 .screen .content .tab-bar .map-view {
   width: 50vw;
   height: 50px;
+
+}
 
 .tab-bar .list-view a {
   text-decoration: none;
