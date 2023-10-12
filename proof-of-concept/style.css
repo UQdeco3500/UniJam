@@ -807,10 +807,19 @@ body {
 
 }
 
-
 .screen .content .tab-bar .map-view {
   width: 50vw;
   height: 50px;
+  padding-top: 6px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Heebo";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  /* 200% */
+  letter-spacing: -0.5px;
 
 }
 
@@ -855,6 +864,8 @@ body {
 .list-text{
   font-size: 10px;
 
+}
+
 .tab-bar .list-view rect {
   fill: #D4D4D4;
 }
@@ -873,6 +884,7 @@ body {
 
 #listView {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
