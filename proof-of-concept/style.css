@@ -796,9 +796,9 @@ body {
   padding-top: 6px;
   text-align: center;
   justify-content: center;
-  color: #3EC6FF;
+  color: #D4D4D4;
   text-align: center;
-  /*   font-family: Roboto; */
+  font-family: "Heebo";
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -806,6 +806,16 @@ body {
   /* 200% */
   letter-spacing: -0.5px;
 
+}
+
+.tab-bar .list-view a {
+  text-decoration: none;
+  color: #D4D4D4;
+}
+
+.tab-bar .list-view.active .list-text, .tab-bar .map-view.active .map-text {
+  color: #3EC6FF;
+  font-family: "Heebo";
 }
 
 .iphone .screen .content .tab-bar .map-view {
@@ -817,7 +827,7 @@ body {
 
   color: #D4D4D4;
   text-align: center;
-  font-family: Roboto;
+  font-family: "Heebo";
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
@@ -833,8 +843,24 @@ body {
     background: #D4D4D4;
     content: '';
   } */
-
 }
+
+.tab-bar .list-view rect {
+  fill: #D4D4D4;
+}
+
+.tab-bar .list-view.active rect {
+  fill: #3EC6FF;
+}
+
+.tab-bar .map-view.active rect {
+  stroke: #3EC6FF;
+}
+
+.tab-bar .map-view.active path {
+  fill: #3EC6FF;
+}
+
 #listView {
   display: flex;
   flex-wrap: wrap;
