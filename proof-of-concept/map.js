@@ -1,7 +1,24 @@
+const gradient = [
+    "rgba(0, 255, 255, 0)",
+    "rgba(0, 255, 255, 1)",
+    "rgba(0, 191, 255, 1)",
+    "rgba(0, 127, 255, 1)",
+    "rgba(0, 63, 255, 1)",
+    "rgba(0, 0, 255, 1)",
+    "rgba(0, 0, 223, 1)",
+    "rgba(0, 0, 191, 1)",
+    "rgba(0, 0, 159, 1)",
+    "rgba(0, 0, 127, 1)",
+    "rgba(63, 0, 91, 1)",
+    "rgba(127, 0, 63, 1)",
+    "rgba(191, 0, 31, 1)",
+    "rgba(255, 0, 0, 1)",
+];
+
 function activeFunction() {
 
     const currentUrl = new URL(window.location.href);
-    const params = new URLSearchParams(currentUrl.search);
+    console.log(currentUrl);
 
     let currentEventsFilter = document.getElementById("current-events");
     let upcomingEventsFilter = document.getElementById("upcoming-events");
@@ -12,9 +29,21 @@ function activeFunction() {
         currentUrl.searchParams.set('filter', 'upcoming-events');
     }
     window.history.replaceState(null, null, currentUrl);
+    setHeatMap();
 
-    // if (document.URL)
-    
+}
+
+function setHeatMap() {
+    heatmap.setMap(null);
+    heatmap = new google.maps.visualization.HeatmapLayer({
+        data: heatMapData(window.location.href),
+        map: map,
+    });
+
+    heatmap.set("gradient", gradient);
+    heatmap.set("radius", 80);
+    heatmap.set("opacity", 0.7);
+    heatmap.setMap(map);
 }
 
 
@@ -73,23 +102,6 @@ function displayMap() {
             map: map,
         });
 
-        const gradient = [
-            "rgba(0, 255, 255, 0)",
-            "rgba(0, 255, 255, 1)",
-            "rgba(0, 191, 255, 1)",
-            "rgba(0, 127, 255, 1)",
-            "rgba(0, 63, 255, 1)",
-            "rgba(0, 0, 255, 1)",
-            "rgba(0, 0, 223, 1)",
-            "rgba(0, 0, 191, 1)",
-            "rgba(0, 0, 159, 1)",
-            "rgba(0, 0, 127, 1)",
-            "rgba(63, 0, 91, 1)",
-            "rgba(127, 0, 63, 1)",
-            "rgba(191, 0, 31, 1)",
-            "rgba(255, 0, 0, 1)",
-        ];
-
         heatmap.set("gradient", gradient);
         heatmap.set("radius", 80);
         heatmap.set("opacity", 0.7);
@@ -109,8 +121,6 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     );
     infoWindow.open(map);
 }
-
-console.log(window.location.href.includes("filter=current-events"));
 
 // heat map data
 function heatMapData(url) {
@@ -138,6 +148,7 @@ function heatMapData(url) {
     ]
 
     if (url.includes("filter=current-events")) {
+        console.log(url);
         return currentEvents;
     } else if (url.includes("filter=upcoming-events")) {
         return upcomingEvents;
