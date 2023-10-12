@@ -1,4 +1,4 @@
-# UQNavi
+# UniJam
  
 This project focuses on creating an app that helps the students and staff in UQ find events based on the following information.
 1. Nearby events
