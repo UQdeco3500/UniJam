@@ -28,6 +28,7 @@ function activeFunction() {
     } else if (upcomingEventsFilter.checked) {
         currentUrl.searchParams.set('filter', 'upcoming-events');
     }
+    
     window.history.replaceState(null, null, currentUrl);
     setHeatMap();
 
