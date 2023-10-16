@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frame Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" lang="eng">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="iphone">
+              <div class="buttons">
+                <div class="silent"></div>
+                <div class="sleep"></div>
+                <div class="vol-up"></div>
+                <div class="vol-down"></div>
+              </div>
+              <div class="top">
+                <div class="black-bar"></div>
+                <div class="iphone-top"></div>
+              </div>
+              <div class="components">
+                <div class="speaker"></div>
+                <div class="camera">
+                  <div class="shine-left"></div>
+                  <div class="shine-right"></div>
+                </div>
+              </div>
+              <div class="top-bar"></div>
+              <div class="bottom-bar"></div>
+              <div class="screen">
+                <!-- Screen content -->
+                <div class="content">
+                <!-- screen main content -->
+                    <div class = "main-screen">
+                        <div class = "title">
+                            <h1>Your Interest </h1>
+                        </div>
+                        <div class = "details">
+                            <h3>Pick up to 4 things you love, it will help us to suggest you the events</h3>
+                        </div>
+                        <div class = "interest-buttons">
+                            <div class = "button1">
+                                <a href="#" class="art">Art</a>
+                            </div>
+                            <div class = "button2">
+                                <a href="#" class="culture">Culture</a>
+                            </div>
+                            <div class = "button3">
+                                <a href="#" class="food">Food</a>
+                            </div>
+                            <div class = "button4">
+                                <a href="#" class="music">Music</a>
+                            </div>
+                            <div class = "button5">
+                                <a href="#" class="sports">Sports</a>
+                            </div>
+                            <div class = "button6">
+                                <a href="#" class="educational">Educational</a>
+                            </div>
+                        </div>
+                        <div class = "decision-buttons">
+                            <div class = "done-button">
+                                <a href="#" class="done">Done</a>
+                            </div>
+                            <div class = "skip-button">
+                                <a href="#" class="skip">Skip</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <!-- End of screen -->
+                <div class="stuff">
+                  <div class="service">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                  </div>
+                  <div class="battery">
+                    <div class="nub"></div>
+                    <div class="energy"></div>
+                  </div>
+          <!--         <div class="lock-carrier">AT&T</div> -->
+          <!--         <div class="lock-lock"></div> -->
+                  <div class="info">
+                    <div class="lock-time"> </div>
+                    <div class="lock-date"> </div>
+                  </div>
+                  <div class="lock-bar"></div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- goo filter for notch shape-->
+          <svg viewbox="0 0 0 0" height="0" width="0">
+            <filter id="goo" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
+              <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
+            </filter>
+          </svg>
+          <script src="preference.js"></script>
+    </body>
+</html>
+
