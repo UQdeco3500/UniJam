@@ -615,11 +615,11 @@ body {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
-  margin: 0px 16px 0px 0px;
+  margin: 0px 10px 0px 0px;
 }
 
 .screen .content .navigation-bar .filter-area .filter-label {
-  width: 60vw;
+  width: 55vw;
   height: 36px;
   flex-shrink: 0;
   font-family: Roboto;
@@ -653,8 +653,7 @@ body {
 .events-filter {
   margin: 0px 10px 0px 0px;
   font-size: 14px;
-  /* text-align: center; */
-  /* align-items: center; */
+
 }
 
 .events-filter input[type="radio"] {
@@ -662,7 +661,8 @@ body {
 }
 
 .events-filter input[type="radio"] + label  {
-  padding: 10px 20px 10px 20px;
+  width: 100%;
+  padding: 8px 15px 8px 15px;
   background:#FFF;
   color: #404040;
   border: 1px solid #EAE9E9;
