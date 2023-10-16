@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Frame Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" lang="eng">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="iphone">
+              <div class="buttons">
+                <div class="silent"></div>
+                <div class="sleep"></div>
+                <div class="vol-up"></div>
+                <div class="vol-down"></div>
+              </div>
+              <div class="top">
+                <div class="black-bar"></div>
+                <div class="iphone-top"></div>
+              </div>
+              <div class="components">
+                <div class="speaker"></div>
+                <div class="camera">
+                  <div class="shine-left"></div>
+                  <div class="shine-right"></div>
+                </div>
+              </div>
+              <div class="top-bar"></div>
+              <div class="bottom-bar"></div>
+              <div class="screen">
+                <div class="content">
+                  
+                    <div class="stuff">
+                    <div class="service">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="battery">
+                        <div class="nub"></div>
+                        <div class="energy"></div>
+                    </div>
+
+                    <!-- sign up screen main content -->
+                  <div id="sign-up">
+                    <div class="logo">
+                        <span class="background-circle"></span>
+                        <img src='images/UniJam-logos_white 1.png' alt="UQ Navi logo" class="logo-image">
+                    </div>
+                    <div class="login">
+                        <div class="login-heading"><h2>Login</h2></div>
+                        <form action="" class="login-form">
+                            <div class="input">
+                                <label for="email">Email:</label><br>
+                                <input type="text" id="email" name="email"><br>
+                            </div>
+                            <div class="input">
+                                <label for="password">Password:</label><br>
+                                <input type="text" id="password" name="password"><br>
+                            </div>
+                            <div class="button">
+                                <button class="login-button">Login</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="or">
+                        <h3>OR</h3>
+                    </div>
+                    <div class="signup">
+                        <div class="signup-prompt">
+                            <p>Not a member yet? <a class="signup-link" href="#">Sign up</a></p>
+                        </div>
+                        <div class="social-media-signin">
+                            <button class="instagram"><img src="images/instagram.jpg" alt="instagram sign in"></button>
+                            <button class="facebook"><img src="images/fb.png" alt="facebook sign in"></button>
+                            <button class="x"><img src="images/x.png" alt="x sign in"></button>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- --------------------------- -->
+                    <!-- <div class="lock-carrier">AT&T</div> -->
+                    <!-- <div class="lock-lock"></div> -->
+                    <div class="info">
+                        <div class="lock-time"> </div>
+                        <div class="lock-date"> </div>
+                    </div>
+                    <div class="lock-bar"></div>
+                    </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- goo filter for notch shape-->
+          <svg viewbox="0 0 0 0" height="0" width="0">
+            <filter id="goo" color-interpolation-filters="sRGB">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
+              <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm"></feColorMatrix>
+              <feBlend in="sourceGraphic" in2="cm" mode="multiply"></feBlend>
+            </filter>
+          </svg>
+    </body>
+</html>
+
