@@ -848,6 +848,7 @@ body {
   } */
 }
 
+<<<<<<< Updated upstream
 .tab-bar .list-view rect {
   fill: #D4D4D4;
 }
@@ -864,6 +865,281 @@ body {
   fill: #3EC6FF;
 }
 
+=======
+.main-screen{
+  flex-wrap: wrap;
+}
+
+.title {
+  display: flex;
+  width: 135px;
+  height: 31px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 105px;
+  margin-left: 49px;
+}
+
+.title h1 {
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 83.333% */
+  letter-spacing: -0.5px;
+}
+
+.details {
+  display: flex;
+  width: 304px;
+  height: 63px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 49px;
+}
+
+.details h3 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: 0.05px;
+}
+
+.interest-buttons {
+  margin-left: 49px;
+}
+
+.interest-buttons .button1 {
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  align-self: center;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button1 .art {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.interest-buttons .button2{
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button2 .culture {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.interest-buttons .button3{
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button3 .food {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.interest-buttons .button4{
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button4 .music {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.interest-buttons .button5{
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button5 .sports {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.interest-buttons .button6{
+  width: 291px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: 1px solid #3EC6FF;
+  background: #ECF9FF;
+  margin-bottom: 37.77px;
+}
+
+.interest-buttons .button6 .educational {
+  display: flex;
+  height: 35.234px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #3EC6FF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.decision-buttons {
+  display: flex;
+  margin-left: 49px;
+  flex-direction: row;
+}
+
+.decision-buttons .done-button{
+  width: 138.387px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 29px;
+  background: #3EC6FF;
+}
+
+.decision-buttons .done-button .done{
+  display: flex;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+.decision-buttons .skip-button{
+  width: 138.387px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 29px;
+  background: #E6EBEF;
+  margin-left: 20.82px;
+}
+
+.decision-buttons .skip-button .skip{
+  display: flex;
+  height: 36px;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #000;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  letter-spacing: -0.5px;
+  text-decoration: none;
+}
+
+
+
+>>>>>>> Stashed changes
 #listView {
   display: flex;
   flex-wrap: wrap;
@@ -924,12 +1200,11 @@ body {
   flex-wrap: wrap;
 }
 
-.eventInfo h6{
+.eventInfo h6 {
   color: #3EC6FF;
-
 }
 
-.eventInfo h4{
+.eventInfo h4 {
   color: #000;
   white-space: nowrap; 
 }
@@ -960,7 +1235,6 @@ body {
 .book-button:hover {
   background-color: #c0392b; /* Change color on hover */
 }
-
 
 
 @media screen and (max-height: 500px) {
