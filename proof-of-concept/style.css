@@ -1136,6 +1136,236 @@ body {
   text-decoration: none;
 }
 
+.list-events {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-events .title-header {
+  margin-left: 19px;
+}
+
+.list-events .title-header h1 {
+  color: #000;
+  text-align: left;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 83.333% */
+  letter-spacing: -0.5px;
+}
+
+.list-events .scrollable-events {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  bottom: 20%;
+}
+
+.list-events .scrollable-events .all-events {
+  list-style: none;
+  margin: 0px;
+  padding-inline-start: 0px;
+}
+
+.list-events .scrollable-events .all-events .event1{
+  height: 385px;
+  flex-shrink: 0;
+  background: #FFF;
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.10);
+}
+
+.event1 .organizer{
+  display: flex;
+  flex-direction: row;
+  margin-left: 16px;
+}
+
+.event1 .organizer .organizer-logo {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 48px;
+  border: 3px solid #FFF;
+  background: url(Images/UQUnionLogo.jpg), lightgray 50% / cover no-repeat;
+  z-index: 1;
+}
+
+.event1 .organizer .organizer-name {
+  color: #404040;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 166.667% */
+  margin-left: 8px;
+  margin-top: -5px;
+}
+
+.event1 .event-image {
+  width: 100em;
+  height: 210px;
+  flex-shrink: 0;
+  margin-top: -17px;
+}
+.event1 .event-details .group {
+  display: flex;
+  flex-direction: row;
+}
+
+.event1 .event-details h4 {
+  color: #3EC6FF;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 200% */
+  margin-left: 17px;
+  margin-top: -2px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.event1 .event-details .like-button {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  margin-right: -17px;
+  margin-left: 105px;
+}
+
+.event1 .event-details .event-name h2     {
+  color: #000;
+  font-family: Roboto;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 133.333% */
+  margin-left: 17px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.event1 .event-details .venue h6 {
+  color: #404040;
+  font-family: Roboto;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 250% */
+  margin-left: 17px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.event1 .moreinfo-book .more-info {
+  display: flex;
+  flex-direction: row;
+  margin-left: 17px;
+}
+
+.event1 .moreinfo-book .more-info .info-image {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.event1 .moreinfo-book {
+  display: flex;
+  flex-direction: row;
+}
+
+.event1 .moreinfo-book .book-button{
+  width: 96px;
+  height: 28px;
+  flex-shrink: 0;
+  border-radius: 32px;
+  background: #3EC6FF;
+  text-decoration: none;
+  text-align: center; 
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 200% */
+  margin-left: 200px;
+  margin-top: -15px;
+}
+
+.event1 .moreinfo-book .more-info .more-event-info {
+  margin-top: -5px;
+}
+
+.event1 .moreinfo-book .more-info .more-event-info a{
+  color: #404040;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 200% */
+  margin-left: 8px;
+}
+
+.event1 .below-bar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 17px;
+  margin-top: 17px;
+} 
+
+.event1 .below-bar .commentBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+}
+
+.below-bar .commentBox .commentImage {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.below-bar .commentBox h5 {
+  color: #404040;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-left: 8px;
+}
+
+.event1 .below-bar .shareBox {
+  display: flex;
+  flex-direction: row;
+  margin-left: 32px;
+}
+
+.below-bar .shareBox .shareImage {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.below-bar .shareBox h5 {
+  color: #404040;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-left: 8px;
+}
+
 #listView {
   display: flex;
   flex-wrap: wrap;
@@ -1215,18 +1445,19 @@ body {
   background-color: #525151; /* Adjust the line's color as needed */
 }
 
-.book-button {
+/*.book-button {
   background-color: #3EC6FF;
   ;
   color: #fff;
-  text-decoration: none;  /*Remove underline for links */
+  text-decoration: none;  /*Remove underline for links 
   padding: 5px 10px;
   border: none;
   position: relative;
   cursor: pointer;
   align-self: self-end;
   border-radius: 32px;
-}
+  
+}*/
 
 .book-button:hover {
   background-color: #c0392b; /* Change color on hover */
