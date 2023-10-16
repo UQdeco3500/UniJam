@@ -48,7 +48,7 @@ body {
   align-items: center;
 }
 
-/* .iphone {
+.iphone {
   position: absolute;
   height: 875px;
   width: 423px;
@@ -80,9 +80,9 @@ body {
   -ms-transform: scale(0.6);
   -webkit-transform: scale(0.6);
   transform: scale(0.6);
-} */
+} 
 
-/* .iphone .buttons .silent,
+.iphone .buttons .silent,
 .iphone .buttons .vol-up,
 .iphone .buttons .vol-down,
 .iphone .buttons .sleep {
@@ -91,23 +91,23 @@ body {
   -moz-border-radius: 2px 0 0 2px;
   -webkit-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
-} */
+} 
 
-/* .iphone .buttons .silent {
+.iphone .buttons .silent {
   height: 40px;
   width: 3px;
   top: 100px;
   left: -8px;
-} */
+} 
 
-/* .iphone .buttons .vol-up,
+.iphone .buttons .vol-up,
 .iphone .buttons .vol-down {
   left: -8px;
   height: 60px;
   width: 4px;
 } */
 
-/* .iphone .buttons .sleep {
+.iphone .buttons .sleep {
   left: auto;
   right: -8px;
   top: 180px;
@@ -116,15 +116,15 @@ body {
   -moz-border-radius: 0 2px 2px 0;
   -webkit-border-radius: 0 2px 2px 0;
   border-radius: 0 2px 2px 0;
-} */
+} 
 
-/* .iphone .buttons .vol-up {
+ .iphone .buttons .vol-up {
   top: 170px;
 }
 
 .iphone .buttons .vol-down {
   top: 250px;
-} */
+} 
 
 .iphone .top {
   position: absolute;
@@ -812,6 +812,7 @@ body {
 .screen .content .tab-bar .map-view {
   width: 50vw;
   height: 50px;
+}
 
 .tab-bar .list-view a {
   text-decoration: none;
@@ -848,7 +849,6 @@ body {
   } */
 }
 
-<<<<<<< Updated upstream
 .tab-bar .list-view rect {
   fill: #D4D4D4;
 }
@@ -865,7 +865,6 @@ body {
   fill: #3EC6FF;
 }
 
-=======
 .main-screen{
   flex-wrap: wrap;
 }
@@ -1137,9 +1136,6 @@ body {
   text-decoration: none;
 }
 
-
-
->>>>>>> Stashed changes
 #listView {
   display: flex;
   flex-wrap: wrap;
