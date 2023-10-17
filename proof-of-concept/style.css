@@ -676,6 +676,46 @@ body {
   border: 1px solid #3EC6FF;
 }
 
+/* ----------------------------------- */
+
+/* Landmark on map */
+.icon-landmark-1 {
+  position: absolute;
+  z-index: 999;
+  top: 30vh;
+  left: 29vw;
+
+}
+
+.icon-landmark-2 {
+  position: absolute;
+  z-index: 999;
+  top: 60vh;
+  left: 22vw;
+
+}
+
+.landmark_attendee_number{
+  position: absolute;
+  top: 0%;
+  right: -15%;
+  width: 24px;
+  height: 24px;
+  /* padding: 4px; */
+  background-color: #fff;
+  border: 2px solid #BE19F9;
+  border-radius: 30px;
+  color: #BE19F9;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  fill: #FFF;
+
+}
+
 /* sign up screen */
 #sign-up {
   height: 100%;
