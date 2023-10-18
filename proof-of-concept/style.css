@@ -616,6 +616,7 @@ body {
   height: 36px;
   flex-shrink: 0;
   margin: 0px 4px 0px 0px;
+
 }
 
 .screen .content .navigation-bar .filter-area .filter-label {
@@ -861,12 +862,15 @@ body {
   line-height: 14px;
   /* 200% */
   letter-spacing: -0.5px;
-
 }
 
-.tab-bar .list-view a {
+.tab-bar .list-view a, .tab-bar .map-view a {
   text-decoration: none;
   color: #8c8c8c;
+}
+
+.tab-bar a {
+  text-decoration: none;
 }
 
 .tab-bar .list-view.active .list-text, .tab-bar .map-view.active .map-text {
