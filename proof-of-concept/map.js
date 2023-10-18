@@ -67,6 +67,7 @@ function displayMap() {
         zoom: 17,
         disableDefaultUI: true,
     });
+  
     infoWindow = new google.maps.InfoWindow();
 
     // Try HTML5 geolocation
