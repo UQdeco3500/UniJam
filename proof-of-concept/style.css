@@ -282,8 +282,7 @@ body {
 }
 
 .screen .stuff {
-  height: 100%;
-  width: 100%;
+  position: relative;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -302,6 +301,8 @@ body {
   -moz-align-items: center;
   -ms-align-items: center;
   align-items: center;
+  z-index: 999;
+  background-color: #fff;
 }
 
 .screen .stuff {
@@ -530,15 +531,6 @@ body {
   -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  /*   -webkit-justify-content: center; */
-  /*   -moz-justify-content: center; */
-  /*   -ms-justify-content: center; */
-  /*   justify-content: center; */
-  /*   -ms-flex-pack: center; */
-  /*   -webkit-align-items: center; */
-  /*   -moz-align-items: center; */
-  /*   -ms-align-items: center; */
-  /*   align-items: center;  */
   background-color: #fff;
   z-index: 999;
 }
@@ -827,6 +819,7 @@ body {
   align-items: center;
   background: #FFF;
   box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.03);
+  z-index: 999;
 
 }
 
@@ -934,11 +927,17 @@ body {
 }
 
 .listView {
-  height: 60vh;
+  height: 70vh;
   bottom: 20vw;
-  padding: 0px 16px 10px 16px;
+  overflow: hidden;
 }
 
+.list-headline{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem 0px 1rem 1.2rem;
+}
 
 #boxList {
   display: flex;
@@ -949,76 +948,126 @@ body {
   /*width: 390px;*/
   background-color: #FFFFFF;
   color: #fff;
-  height: 385px;
-  padding: 1px;
+  height: 46vh;
+  /* padding: 1px; */
   position: relative;
-  display: flex; /* Display image and content in a row */
+  display: flex; 
+  /* Display image and content in a row */
   flex-wrap: wrap;
   /* Vertically align image and content */
+  box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.10);
+  margin: 0rem 0rem 1rem 0rem;
+
 }
 
-.header {
+.box-header {
   display: flex; /* Use flexbox for side-by-side layout */
   align-items: flex-start; /* Vertically align items */
-  height: 5%;
+  height: 1vh;
+  margin: 0px;
 }
 
-.header img {
+.box-header img {
   /*Set the width of the logo as needed */
   /* Maintain aspect ratio */
   margin-left: 5%; /* Add spacing between the logo and text */
-  margin-top: 5%;
+  margin-top: 0.2rem;
 }
 
-.header h4 {
-  margin-left: 15px; /* Remove default margin on the heading */
+.box-header h5 {
+  margin: 12px 0px 0px 8px; /* Remove default margin on the heading */
   color: #000;
-  bottom: 5%;
   white-space: nowrap;
+  font-size: 0.85rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+
+.box-header .list-view-organisers{
+  /* border-radius: 40px; */
+  /* border: 2px solid #fff; */
+  z-index: 999;
 }
 
 .poster {
-  width: auto; /* Set a maximum width for the image */
-  height: auto; /* Maintain aspect ratio */
+  position: absolute;
+  width: 100vw; 
+  /* Set a maximum width for the image */
+  height: 25vh; 
+  /* Maintain aspect ratio */
   align-self: center;
-  margin-top: 10%;
+  overflow: hidden;
+  top: 4vh;
+}
+
+.poster img{
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+
 }
 
 .eventInfo {
-  display: flex;
-  flex-wrap: wrap;
+  top: 23vh;
+  width: 100vw;
+  height: 21vh;
+  /* align-items: center; */
+  /* margin: 14rem 0rem 1rem 0rem; */
+  padding: 0px 0px 0px 1rem;
+  position: relative;
+
 }
 
-.eventInfo h6{
+.eventInfo .event-time{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
   color: #3EC6FF;
 
 }
 
-.eventInfo h4{
+.eventInfo .event-title{
+  padding: 0.2rem 0px 0px 0px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
   color: #000;
   white-space: nowrap; 
 }
 
+.eventInfo .location-detail{
+  left: 2vw;
+  padding: 0.3rem 0rem 0rem 0rem;
+  color: #404040;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  
+}
 
 .line {
   position: absolute;
-  bottom: 10%;
+  bottom: 12%;
   left: 0;
   right: 0;
-  height: 1px; /* Adjust the line's height as needed */
-  background-color: #525151; /* Adjust the line's color as needed */
+  height: 0.8px; /* Adjust the line's height as needed */
+  background-color: #dadada; /* Adjust the line's color as needed */
 }
 
-.book-button {
+.eventInfo .book-button {
   background-color: #3EC6FF;
-  ;
   color: #fff;
   text-decoration: none;  /*Remove underline for links */
-  padding: 5px 10px;
+  padding: 10px 15px;
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
   border: none;
-  position: relative;
+  position: absolute;
   cursor: pointer;
-  align-self: self-end;
+  right: 4vw;
+  top: 4vh;
+  /* align-self: self-end; */
   border-radius: 32px;
 }
 
@@ -1026,7 +1075,61 @@ body {
   background-color: #c0392b; /* Change color on hover */
 }
 
+.url-link {
+  display: flex;
+  padding: 0.5rem 0rem 0rem 0rem;
+}
 
+.url-link a{
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1rem;
+  margin-left: 0.5rem;
+}
+
+.social-info {
+  position: relative;
+  /* margin: 2rem 0rem 0rem 0rem; */
+  padding: 0rem 1rem 0rem 1rem;
+  top: 6vh;
+  width: 100vw;
+  height: 4vh;
+  color: #404040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-info .reaction{
+  width: 48vw;
+  height: 2vh;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.social-info .reaction .comment, 
+.social-info .reaction .share{
+  width: 50%;
+  height: auto;
+  margin: 0rem 2rem 0rem 0rem;
+  display: flex;
+  text-align: center;
+}
+
+.social-info .reaction .comment .comment-icon, 
+.social-info .reaction .share .share-icon{
+  margin: 0rem 0.6rem 0rem 0rem;
+}
+
+.social-info .reaction .comment .comment-text, 
+.social-info .reaction .share .share-text{
+  line-height: 1rem;
+}
 
 @media screen and (max-height: 500px) {
   .iphone {
