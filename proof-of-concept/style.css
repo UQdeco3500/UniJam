@@ -550,7 +550,7 @@ body {
 /*  Navigation bar */
 .screen .content .navigation-bar {
   top: 0px;
-  height: 156px;
+  height: 145px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.05);
   width: 100vw;
   align-items: center;
@@ -565,7 +565,7 @@ body {
 
 .screen .content .navigation-bar .search-bar {
   position: absolute;
-  top: 42px;
+  top: 24px;
   width: 92vw;
   height: 44px;
   flex-shrink: 0;
@@ -602,9 +602,9 @@ body {
 
 .screen .content .navigation-bar .filter-area {
   position: absolute;
-  top: 100px;
-  width: 92vw;
-  height: 42px;
+  top: 85px;
+  width: 100vw;
+  height: 5vh;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -615,15 +615,15 @@ body {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
-  margin: 0px 16px 0px 0px;
+  margin: 0px 10px 0px 0px;
 }
 
 .screen .content .navigation-bar .filter-area .filter-label {
-  width: 60vw;
-  height: 36px;
+  width: 55vw;
+  /* height: 20vh; */
   flex-shrink: 0;
   font-family: Roboto;
-  font-size: 10px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
   line-height: 34px;
@@ -651,10 +651,10 @@ body {
 }
 
 .events-filter {
-  margin: 0px 10px 0px 0px;
+  /* margin: 0px 10px 0px 0px; */
   font-size: 14px;
-  /* text-align: center; */
-  /* align-items: center; */
+  width: 40vw;
+
 }
 
 .events-filter input[type="radio"] {
@@ -662,7 +662,8 @@ body {
 }
 
 .events-filter input[type="radio"] + label  {
-  padding: 10px 20px 10px 20px;
+  /* width: 100vw; */
+  padding: 8px 15px 8px 15px;
   background:#FFF;
   color: #404040;
   border: 1px solid #EAE9E9;
@@ -673,6 +674,46 @@ body {
   background:rgba(62, 198, 255, 0.10);
   color: #3EC6FF;
   border: 1px solid #3EC6FF;
+}
+
+/* ----------------------------------- */
+
+/* Landmark on map */
+.icon-landmark-1 {
+  position: absolute;
+  z-index: 999;
+  top: 30vh;
+  left: 29vw;
+
+}
+
+.icon-landmark-2 {
+  position: absolute;
+  z-index: 999;
+  top: 60vh;
+  left: 22vw;
+
+}
+
+.landmark_attendee_number{
+  position: absolute;
+  top: 0%;
+  right: -15%;
+  width: 24px;
+  height: 24px;
+  /* padding: 4px; */
+  background-color: #fff;
+  border: 2px solid #BE19F9;
+  border-radius: 30px;
+  color: #BE19F9;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  fill: #FFF;
+
 }
 
 /* sign up screen */
@@ -698,7 +739,6 @@ body {
 }
 
 #sign-up .logo .logo-image {
-  /* background: black; */
   position: absolute;
 }
 
@@ -808,10 +848,19 @@ body {
 
 }
 
-
 .screen .content .tab-bar .map-view {
   width: 50vw;
   height: 50px;
+  padding-top: 6px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Heebo";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 14px;
+  /* 200% */
+  letter-spacing: -0.5px;
 }
 
 .tab-bar .list-view a {
@@ -831,8 +880,8 @@ body {
   text-align: center;
   color: #3EC6FF;
   text-align: center;
-  font-family: Roboto;
-  font-size: 10px;
+  /* font-family: Roboto; */
+  /* font-size: 10px; */
   font-style: normal;
   font-weight: 400;
   line-height: 14px;
@@ -847,6 +896,14 @@ body {
     background: #D4D4D4;
     content: '';
   } */
+}
+.map-text{
+  font-size: 10px;
+}
+
+.list-text{
+  font-size: 10px;
+
 }
 
 .tab-bar .list-view rect {
@@ -867,6 +924,7 @@ body {
 
 #listView {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
 }
 
