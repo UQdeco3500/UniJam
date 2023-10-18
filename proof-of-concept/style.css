@@ -934,8 +934,9 @@ body {
 }
 
 .listView {
-  height: 60%;
-  bottom: 20%;
+  height: 60vh;
+  bottom: 20vw;
+  padding: 0px 16px 10px 16px;
 }
 
 
