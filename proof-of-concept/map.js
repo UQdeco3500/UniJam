@@ -20,9 +20,9 @@ const gradient = [
 ];
 
 function activeFunction() {
-  const currentUrl = new URL(window.location.href);
-  const params = new URLSearchParams(currentUrl.search);
 
+    const currentUrl = new URL(window.location.href);
+    console.log(currentUrl);
 
   let currentEventsFilter = document.getElementById("current-events");
   let upcomingEventsFilter = document.getElementById("upcoming-events");
@@ -51,7 +51,6 @@ function setHeatMap() {
     heatmap.set("radius", 80);
     heatmap.set("opacity", 0.7);
     heatmap.setMap(map);
-
 }
 
 function setEventMarkers() {
@@ -81,58 +80,58 @@ function setEventMarkers() {
 let map, infoWindow, marker, heatmap, eventMarkerFeatures;
 let eventMarkers = [];
 
-
 /**
- * Function to display the map screen.
+ * Function to display the map screen. 
  */
 function displayMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: {
-      lat: -27.49708,
-      lng: 153.01364,
-    },
-    zoom: 17,
-    disableDefaultUI: true,
-  });
-  infoWindow = new google.maps.InfoWindow();
-
-  // Try HTML5 geolocation
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        const pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        };
-
-        infoWindow.setPosition(pos);
-        map.setCenter(pos);
-
-        // add current location marker --------------------
-        marker = new google.maps.Marker({
-          position: pos,
-          map: map,
-          icon: {
-            path: google.maps.SymbolPath.CIRCLE,
-            scale: 10,
-            fillOpacity: 1,
-            strokeWeight: 2,
-            fillColor: "#5384ED",
-            strokeColor: "#ffffff",
-          },
-        });
-        // -----------------------------------------------
-      },
-      () => {
-        handleLocationError(true, infoWindow, map.getCenter());
-      }
-    );
-
-    // set heatmap --------------------------------------------
-    heatmap = new google.maps.visualization.HeatmapLayer({
-      data: heatMapData(window.location.href),
-      map: map,
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: {
+            lat: -27.49708,
+            lng: 153.01364,
+        }, 
+        zoom: 17,
+        disableDefaultUI: true,
     });
+  
+    infoWindow = new google.maps.InfoWindow();
+
+    // Try HTML5 geolocation
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
+
+                infoWindow.setPosition(pos);
+                map.setCenter(pos);
+
+                // add current location marker --------------------
+                marker = new google.maps.Marker({
+                    position: pos,
+                    map: map,
+                    icon: {
+                        path: google.maps.SymbolPath.CIRCLE,
+                        scale: 10,
+                        fillOpacity: 1,
+                        strokeWeight: 2,
+                        fillColor: '#5384ED',
+                        strokeColor: '#ffffff',
+                    }
+                });
+                // -----------------------------------------------
+            },
+            () => {
+                handleLocationError(true, infoWindow, map.getCenter());
+            },
+        );
+        
+        // set heatmap --------------------------------------------
+        heatmap = new google.maps.visualization.HeatmapLayer({
+            data: heatMapData(window.location.href),
+            map: map,
+        });
 
     heatmap.set("gradient", gradient);
     heatmap.set("radius", 80);
@@ -159,17 +158,14 @@ function displayMap() {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
-
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-  infoWindow.setPosition(pos);
-  infoWindow.setContent(
-    browserHasGeolocation
-      ? "Error: The Geolocation service failed."
-      : "Error: Your browser doesn't support geolocation"
-  );
-  infoWindow.open(map);
+    infoWindow.setPosition(pos);
+    infoWindow.setContent(
+        browserHasGeolocation ? "Error: The Geolocation service failed." : "Error: Your browser doesn't support geolocation",
+    );
+    infoWindow.open(map);
 }
 // ---End of code retrieved from https://developers.google.com/maps/documentation/javascript/geolocation---
 
@@ -236,8 +232,8 @@ function eventData(url) {
     };
 
     return eventMarkerFeatures;
-
 }
+
 
 window.displayMap = displayMap;
 
