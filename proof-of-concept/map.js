@@ -24,17 +24,19 @@ function activeFunction() {
     const currentUrl = new URL(window.location.href);
     console.log(currentUrl);
 
-    let currentEventsFilter = document.getElementById("current-events");
-    let upcomingEventsFilter = document.getElementById("upcoming-events");
+  let currentEventsFilter = document.getElementById("current-events");
+  let upcomingEventsFilter = document.getElementById("upcoming-events");
 
-    if (currentEventsFilter.checked) {
-        currentUrl.searchParams.set('filter', 'current-events');
-    } else if (upcomingEventsFilter.checked) {
-        currentUrl.searchParams.set('filter', 'upcoming-events');
-    }
 
-    window.history.replaceState(null, null, currentUrl);
-    setHeatMap();
+  if (currentEventsFilter.checked) {
+    currentUrl.searchParams.set("filter", "current-events");
+  } else if (upcomingEventsFilter.checked) {
+    currentUrl.searchParams.set("filter", "upcoming-events");
+  }
+
+  window.history.replaceState(null, null, currentUrl);
+  setHeatMap();
+  setEventMarkers(currentUrl);
 
 }
 
@@ -51,9 +53,32 @@ function setHeatMap() {
     heatmap.setMap(map);
 }
 
+function setEventMarkers() {
+    console.log(eventMarkers);
 
-// code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation 
-let map, infoWindow, marker, heatmap;
+    for (let i = 0; i < eventMarkers.length; i++) {
+        eventMarkers[i].setMap(null);
+    };
+    eventMarkers = [];
+    
+    // console.log(eventData(window.location.href));
+    eventMarkerFeatures = eventData(window.location.href);
+
+    for (let i=0; i<eventMarkerFeatures.length; i++) {
+        const eventMarker = new google.maps.Marker({
+            position: eventMarkerFeatures[i].position,
+            icon: eventMarkerFeatures[i].icon,
+            map: map
+        });
+
+        eventMarkers.push(eventMarker);
+        eventMarker.setMap(map)
+    };
+};
+
+// code retrieved from: https://developers.google.com/maps/documentation/javascript/geolocation
+let map, infoWindow, marker, heatmap, eventMarkerFeatures;
+let eventMarkers = [];
 
 /**
  * Function to display the map screen. 
@@ -108,30 +133,28 @@ function displayMap() {
             map: map,
         });
 
-        const gradient = [
-            "rgba(0, 255, 255, 0)",
-            "rgba(0, 255, 255, 1)",
-            "rgba(0, 191, 255, 1)",
-            "rgba(0, 127, 255, 1)",
-            "rgba(0, 63, 255, 1)",
-            "rgba(0, 0, 255, 1)",
-            "rgba(0, 0, 223, 1)",
-            "rgba(0, 0, 191, 1)",
-            "rgba(0, 0, 159, 1)",
-            "rgba(0, 0, 127, 1)",
-            "rgba(63, 0, 91, 1)",
-            "rgba(127, 0, 63, 1)",
-            "rgba(191, 0, 31, 1)",
-            "rgba(255, 0, 0, 1)",
-        ];
+    heatmap.set("gradient", gradient);
+    heatmap.set("radius", 80);
+    heatmap.set("opacity", 0.7);
+    heatmap.setMap(map);
+    // --------------------------------------------------------
 
-        heatmap.set("gradient", gradient);
-        heatmap.set("radius", 80);
-        heatmap.set("opacity", 0.7);
-        heatmap.setMap(map);
-        // --------------------------------------------------------
-        
-    } else {
+    // eventMarkerFeatures --> array of objects containing marker position and icon values. 
+    eventMarkerFeatures = eventData(window.location.href);
+
+    for (i=0; i<eventMarkerFeatures.length; i++) {
+        const eventMarker = new google.maps.Marker({
+            position: eventMarkerFeatures[i].position,
+            icon: eventMarkerFeatures[i].icon,
+            map: map
+        });
+
+        // eventMarkers --> array of google.maps.Marker objects. 
+        eventMarkers.push(eventMarker);
+        eventMarker.setMap(map)
+    };
+
+  } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
@@ -144,68 +167,73 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     );
     infoWindow.open(map);
 }
+// ---End of code retrieved from https://developers.google.com/maps/documentation/javascript/geolocation---
 
 // heat map data
 function heatMapData(url) {
 
-    var currentEvents = [
-        // School of Chemistry
-        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-        new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-        // General Purpose North
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-        new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    ]
-    
-    var upcomingEvents = [
-        // UQ
-        new google.maps.LatLng(-27.49708, 153.01364),
-        new google.maps.LatLng(-27.49708, 153.01364),
-        // Advanced Engineering
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-        new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-    ]
+  var currentEvents = [
+    // School of Chemistry
+    new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+    // General Purpose North
+    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+  ];
 
-    if (url.includes("filter=current-events")) {
-        console.log(url);
-        return currentEvents;
-    } else if (url.includes("filter=upcoming-events")) {
-        return upcomingEvents;
-    }
+  var upcomingEvents = [
+    // UQ
+    new google.maps.LatLng(-27.49708, 153.01364),
+    new google.maps.LatLng(-27.49708, 153.01364),
+    // Advanced Engineering
+    new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+    new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+  ];
 
-    // return [
-    //     // UQ
-    //     new google.maps.LatLng(-27.49708, 153.01364),
-    //     new google.maps.LatLng(-27.49708, 153.01364),
-    //     // General Purpose North
-    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    //     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    //     // Advanced Engineering
-    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-    //     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-    //     // School of Chemistry
-    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-    //     new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-    // ];
+  if (url.includes("filter=current-events")) {
+    return currentEvents;
+  } else if (url.includes("filter=upcoming-events")) {
+    return upcomingEvents;
+  }
 }
-// ---End of code retrieved from https://developers.google.com/maps/documentation/javascript/geolocation---
+
+function eventData(url) {
+
+    var currentEvents = [
+        {
+            position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
+            icon: "./Images/map-marker.png"
+        },
+        {
+            position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+            icon: "./Images/map-marker.png"
+        }
+    ]
+
+    var upcomingEvents = [
+        {
+            position: new google.maps.LatLng(-27.49708, 153.01364),
+            icon: "./Images/map-marker.png"
+        },
+        {
+            position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+            icon: "./Images/map-marker.png"
+        }
+    ]
+
+    if(url.includes("filter=current-events")) {
+        eventMarkerFeatures = currentEvents;
+    } else if (url.includes("filter=upcoming-events")) {
+        eventMarkerFeatures = upcomingEvents;
+    };
+
+    return eventMarkerFeatures;
+}
 
 
 window.displayMap = displayMap;
 
-
-// onclick filter
-// function onclickFunction() {
-//     var element = document.getElementById("unselect-filter");
-//     // console.log("element:", element.classList);
-//     element.classList.toggle("filter-normal");
-
-// }

@@ -9,6 +9,4 @@ This project focuses on creating an app that helps the students and staff in UQ 
 
 4. What’s on today?
 
-5. Experience from other people
-
-6. Find events based on interest. events based on  
+6. Find events based on interest. 
