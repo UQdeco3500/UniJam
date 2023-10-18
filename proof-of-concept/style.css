@@ -615,7 +615,7 @@ body {
   width: 36px;
   height: 36px;
   flex-shrink: 0;
-  margin: 0px 10px 0px 0px;
+  margin: 0px 4px 0px 0px;
 }
 
 .screen .content .navigation-bar .filter-area .filter-label {
@@ -817,9 +817,9 @@ body {
 /* Tab bar */
 .screen .content .tab-bar {
   position: absolute;
-  bottom: 36px;
+  bottom: 6vh;
   width: 100vw;
-  height: 49px;
+  height: 70px;
   flex-shrink: 0;
   display: flex;
   justify-content: space-between;
@@ -832,7 +832,7 @@ body {
 .screen .content .tab-bar .list-view {
   width: 50vw;
   height: 50px;
-  padding-top: 6px;
+  padding-top: 4px;
   text-align: center;
   justify-content: center;
 
@@ -851,7 +851,7 @@ body {
 .screen .content .tab-bar .map-view {
   width: 50vw;
   height: 50px;
-  padding-top: 6px;
+  padding-top: 4px;
   text-align: center;
   justify-content: center;
   font-family: "Heebo";
