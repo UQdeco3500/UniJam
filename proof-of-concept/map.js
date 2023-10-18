@@ -27,9 +27,6 @@ function activeFunction() {
   let currentEventsFilter = document.getElementById("current-events");
   let upcomingEventsFilter = document.getElementById("upcoming-events");
 
-  const currentUrl = new URL(window.location.href);
-  console.log(currentUrl);
-
 
   if (currentEventsFilter.checked) {
     currentUrl.searchParams.set("filter", "current-events");
@@ -144,17 +141,6 @@ function displayMap() {
     heatmap.setMap(map);
     // --------------------------------------------------------
   } else {
-    // Browser doesn't support Geolocation
-    handleLocationError(false, infoWindow, map.getCenter());
-  }
-
-        heatmap.set("gradient", gradient);
-        heatmap.set("radius", 80);
-        heatmap.set("opacity", 0.7);
-        heatmap.setMap(map);
-        // --------------------------------------------------------
-        
-    } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }

@@ -863,9 +863,13 @@ body {
   letter-spacing: -0.5px;
 }
 
-.tab-bar .list-view a {
+.tab-bar .list-view a, .tab-bar .map-view a {
   text-decoration: none;
   color: #8c8c8c;
+}
+
+.tab-bar a {
+  text-decoration: none;
 }
 
 .tab-bar .list-view.active .list-text, .tab-bar .map-view.active .map-text {
