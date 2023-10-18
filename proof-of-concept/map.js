@@ -210,22 +210,22 @@ function eventData(url) {
     var currentEvents = [
         {
             position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-            icon: "./Images/UQUnionLogo.jpg"
+            icon: "./Images/map-marker.png"
         },
         {
             position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-            icon: "./Images/UQUnionLogo.jpg"
+            icon: "./Images/map-marker.png"
         }
     ]
 
     var upcomingEvents = [
         {
             position: new google.maps.LatLng(-27.49708, 153.01364),
-            icon: "./Images/UQUnionLogo.jpg"
+            icon: "./Images/map-marker.png"
         },
         {
             position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-            icon: "./Images/UQUnionLogo.jpg"
+            icon: "./Images/map-marker.png"
         }
     ]
 
@@ -241,10 +241,3 @@ function eventData(url) {
 
 window.displayMap = displayMap;
 
-// onclick filter
-// function onclickFunction() {
-//     var element = document.getElementById("unselect-filter");
-//     // console.log("element:", element.classList);
-//     element.classList.toggle("filter-normal");
-
-// }
