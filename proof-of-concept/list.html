@@ -64,7 +64,7 @@
                   -->
                   <div class = "list-events">
                     <div class = "title-header">
-                        <h1>What's On Today</h1>
+                        <h2>What's On Today</h2>
                     </div>
                     <div class = "scrollable-events">
                         <ul class="all-events">
@@ -75,7 +75,7 @@
                                     <img src="Images/UQUnionLogo.jpg" alt="logo">
                                   </div>
                                   <div class = "organizer-name">
-                                      <h3>University of Queensland Union</h3>
+                                      <h4>University of Queensland Union</h4>
                                   </div>
                                 </div>
                                 <div class = "event-image" onclick="openPopup(event)">
@@ -173,32 +173,43 @@
                     </div>
                   </div> 
                     <!-- Rectangular boxed will be dynamically added here-->
-                  </div>
-                  <div></div>
+                    <!-- bottom tab bar -->
                   <div class="tab-bar">
-                    <div class="list-view">
-                      <div class="list-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-          <rect y="4" width="3" height="3" rx="1.5" fill="white"/>
-          <rect x="6" y="4" width="20" height="3" rx="1.5" fill="white"/>
-          <rect y="12" width="3" height="3" rx="1.5" fill="#3EC6FF"/>
-          <rect x="6" y="12" width="20" height="3" rx="1.5" fill="white"/>
-          <rect y="20" width="3" height="3" rx="1.5" fill="white"/>
-          <rect x="6" y="20" width="20" height="3" rx="1.5" fill="white"/>
-          </svg></div>
-                      <div class="list-text">List view</div>
-                    </div>
-                    <div class="map-view">
-                      <a href="map.html"><div class="map-icon"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-          <rect x="1.5" y="9.5" width="23" height="14" rx="1.5" stroke="#D5D5D5" stroke-width="3"/>
-          <path d="M20.5 8C20.5 8.99551 20.3063 9.94455 19.955 10.8124C19.5171 11.8942 18.3172 13.7045 16.976 15.5505C15.6479 17.3784 14.2222 19.1866 13.3738 20.2444C13.1802 20.4857 12.8198 20.4857 12.6262 20.2444C11.7778 19.1866 10.3521 17.3784 9.02399 15.5505C7.68277 13.7045 6.48289 11.8942 6.04499 10.8124C5.69369 9.94455 5.5 8.99551 5.5 8C5.5 3.85786 8.85786 0.5 13 0.5C17.1421 0.5 20.5 3.85786 20.5 8Z" fill="#D5D5D5" stroke="white"/>
-          <circle cx="13" cy="8" r="3" fill="white"/>
-          </svg></div></a>
-                      <div class="map-text">Map view</div>
-                    </div>
+                    <a href="list.html">
+                      <div class="list-view">
+                        <div class="list-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                            <rect y="4" width="3" height="3" rx="1.5" fill="#8C8C8C" />
+                            <rect x="6" y="4" width="20" height="3" rx="1.5" fill="#8C8C8C" />
+                            <rect y="12" width="3" height="3" rx="1.5" fill="#8C8C8C" />
+                            <rect x="6" y="12" width="20" height="3" rx="1.5" fill="#8C8C8C" />
+                            <rect y="20" width="3" height="3" rx="1.5" fill="#8C8C8C" />
+                            <rect x="6" y="20" width="20" height="3" rx="1.5" fill="#8C8C8C" />
+                          </svg>
+                        </div>
+                        <div class="list-text">List view</div>
+                      </div>
+                    </a>
+                    <a href="map.html">
+                      <div class="map-view">
+                        <div class="map-icon">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                            <rect x="1.5" y="9.5" width="23" height="14" rx="1.5" stroke="#3EC6FF" stroke-width="3" />
+                            <path
+                              d="M20.5 8C20.5 8.99551 20.3063 9.94455 19.955 10.8124C19.5171 11.8942 18.3172 13.7045 16.976 15.5505C15.6479 17.3784 14.2222 19.1866 13.3738 20.2444C13.1802 20.4857 12.8198 20.4857 12.6262 20.2444C11.7778 19.1866 10.3521 17.3784 9.02399 15.5505C7.68277 13.7045 6.48289 11.8942 6.04499 10.8124C5.69369 9.94455 5.5 8.99551 5.5 8C5.5 3.85786 8.85786 0.5 13 0.5C17.1421 0.5 20.5 3.85786 20.5 8Z"
+                              fill="#3EC6FF" stroke="white" />
+                            <circle cx="13" cy="8" r="3" fill="white" />
+                          </svg>
+                        </div>
+                        <div class="map-text">Map view</div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- End of bottom tab bar -->
                   </div>
                 
                 </div>
-                <div class="stuff">
+                <!-- <div class="stuff">
                   <div class="service">
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -209,15 +220,15 @@
                     <div class="nub"></div>
                     <div class="energy"></div>
                   </div>
-          <!--         <div class="lock-carrier">AT&T</div> -->
-          <!--         <div class="lock-lock"></div> -->
+                   <div class="lock-carrier">AT&T</div>
+                 <div class="lock-lock"></div>
                   <div class="info">
                     <div class="lock-time"> </div>
                     <div class="lock-date"> </div>
                   </div>
                   <div class="lock-bar"></div>
-                </div>
-                <div class="share-text">Share</div>
+                </div>  -->
+                <!-- <div class="share-text">Share</div> -->
               </div>
             </div>
           </div>
@@ -226,45 +237,14 @@
         <!-- Rectangular boxed will be dynamically added here-->
       </div>
       <!-- End List view -->
-      <!-- Bottom tab bar -->
-      <div class="tab-bar">
-        <div class="list-view">
-          <div class="list-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-              <rect y="4" width="3" height="3" rx="1.5" fill="white" />
-              <rect x="6" y="4" width="20" height="3" rx="1.5" fill="white" />
-              <rect y="12" width="3" height="3" rx="1.5" fill="#3EC6FF" />
-              <rect x="6" y="12" width="20" height="3" rx="1.5" fill="white" />
-              <rect y="20" width="3" height="3" rx="1.5" fill="white" />
-              <rect x="6" y="20" width="20" height="3" rx="1.5" fill="white" />
-            </svg>
-          </div>
-          <div class="list-text">List view</div>
-        </div>
-        <div class="map-view">
-          <a href="map.html">
-            <div class="map-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                <rect x="1.5" y="9.5" width="23" height="14" rx="1.5" stroke="#D5D5D5" stroke-width="3" />
-                <path
-                  d="M20.5 8C20.5 8.99551 20.3063 9.94455 19.955 10.8124C19.5171 11.8942 18.3172 13.7045 16.976 15.5505C15.6479 17.3784 14.2222 19.1866 13.3738 20.2444C13.1802 20.4857 12.8198 20.4857 12.6262 20.2444C11.7778 19.1866 10.3521 17.3784 9.02399 15.5505C7.68277 13.7045 6.48289 11.8942 6.04499 10.8124C5.69369 9.94455 5.5 8.99551 5.5 8C5.5 3.85786 8.85786 0.5 13 0.5C17.1421 0.5 20.5 3.85786 20.5 8Z"
-                  fill="#D5D5D5" stroke="white" />
-                <circle cx="13" cy="8" r="3" fill="white" />
-              </svg>
-            </div>
-          </a>
-          <div class="map-text">Map view</div>
-        </div>
-      </div>
-      <!-- End of bottom tab bar -->
     </div>
     <!-- End of screen -->
-    <div class="stuff">
+    <!-- <div class="stuff">
       <div class="lock-bar"></div>
-    </div>
+    </div> -->
   </div>
   <!-- goo filter for notch shape-->
-  <svg viewbox="0 0 0 0" height="0" width="0">
+  <!-- <svg viewbox="0 0 0 0" height="0" width="0"> -->
     <filter id="goo" color-interpolation-filters="sRGB">
       <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"></feGaussianBlur>
       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 8 -1" result="cm">

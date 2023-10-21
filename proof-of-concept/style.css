@@ -278,7 +278,7 @@ body {
   margin: 0 auto;
   top:0;
   left: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: #fff;
 }
 
@@ -531,8 +531,20 @@ body {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
+  flex-direction: column; */
+  /*   -webkit-justify-content: center; */
+  /*   -moz-justify-content: center; */
+  /*   -ms-justify-content: center; */
+  /*   justify-content: center; */
+  /*   -ms-flex-pack: center; */
+  /*   -webkit-align-items: center; */
+  /*   -moz-align-items: center; */
+  /*   -ms-align-items: center; */
+  /*   align-items: center;  */
+  flex-direction: column;
   background-color: #fff;
   overflow-y: auto;
+  /* overflow-x: hidden; */
   /* z-index: 999; */
 }
 
@@ -675,8 +687,20 @@ body {
 /* ----------------------------------- */
 
 /* list view page */
+
+.list-events .title-header h2 {
+  margin-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
 .scrollable-events {
   overflow-y: auto;
+  /* overflow-x: hidden; */
+}
+
+.scrollable-events .event-image img {
+  width: 100vw;
 }
 
 .scrollable-events .all-events {
@@ -688,8 +712,22 @@ body {
   display: flex;
   align-items: center;
   padding: 0;
+  margin-left: 10px;
+  margin-top: 20px;
 }
 
+.scrollable-events .all-events .organizer-name h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.scrollable-events .all-events .organizer-logo img {
+  width: 40px;
+}
+
+.scrollable-events .all-events .event-details {
+  margin-left: 15px;
+}
 
 .scrollable-events .all-events li {
   list-style-type: none;
@@ -834,7 +872,7 @@ body {
 /* Tab bar */
 .screen .content .tab-bar {
   position: absolute;
-  bottom: 6vh;
+  bottom: 0;
   width: 100vw;
   height: 70px;
   flex-shrink: 0;
@@ -843,8 +881,7 @@ body {
   align-items: center;
   background: #FFF;
   box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.03);
-  z-index: 999;
-
+  z-index: 0;
 }
 
 .screen .content .tab-bar .list-view {
@@ -900,7 +937,7 @@ body {
   height: 50px;
   padding-top: 6px;
   text-align: center;
-  color: #3EC6FF;
+  color: #8c8c8c;
   text-align: center;
   /* font-family: Roboto; */
   /* font-size: 10px; */
@@ -919,6 +956,8 @@ body {
     content: '';
   } */
 }
+
+
 .map-text{
   font-size: 10px;
 }
@@ -942,6 +981,15 @@ body {
 
 .tab-bar .map-view.active path {
   fill: #3EC6FF;
+}
+
+
+.tab-bar .map-view rect {
+  stroke: #D4D4D4;
+}
+
+.tab-bar .map-view path {
+  fill: #D4D4D4;
 }
 
 #listView {
@@ -1156,6 +1204,7 @@ body {
 }/* POPUP CONTENT */
 .event-popup-clickable {
   position: relative;
+
   /* display: inline-block; */
 }
 
