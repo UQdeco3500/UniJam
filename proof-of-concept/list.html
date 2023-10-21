@@ -9,7 +9,7 @@
     <body>
         <div class="container">
             <div class="iphone">
-              <div class="buttons">
+              <!-- <div class="buttons">
                 <div class="silent"></div>
                 <div class="sleep"></div>
                 <div class="vol-up"></div>
@@ -25,10 +25,9 @@
                   <div class="shine-left"></div>
                   <div class="shine-right"></div>
                 </div>
-              </div>
-              <div class="top-bar"></div>
-              <div class="bottom-bar"></div>
+              </div> -->
               <div class="screen">
+                <div class="event-popup-clickable">
                 <div class="content">
                   <div class="navigation-bar">
                     <div class="search-bar">
@@ -49,8 +48,14 @@
           <circle cx="13.5" cy="28.5" r="3" fill="white" stroke="#404040"/>
           </svg>
                       </div>
-                      <div class="filter-label-press">What's on today</div>
-                      <div class="filter-label-normal">Upcoming events</div>
+                      <div class="events-filter">
+                        <input type="radio" name="events" id="current-events" onchange="activeFunction()" checked><label
+                          for="current-events">What's on today</label>
+                      </div>
+                      <div class="events-filter">
+                        <input type="radio" name="events" id="upcoming-events" onchange="activeFunction()"><label
+                          for="upcoming-events">Upcoming events</label>
+                      </div>
                     
                     </div>
                   </div>
@@ -64,7 +69,7 @@
                     <div class = "scrollable-events">
                         <ul class="all-events">
                             <li class = "event1">
-                              <div class="event-popup-clickable">
+                              <!-- <div class="event-popup-clickable"> -->
                                 <div class = "organizer">
                                   <div class = "organizer-logo">
                                     <img src="Images/UQUnionLogo.jpg" alt="logo">
@@ -73,7 +78,7 @@
                                       <h3>University of Queensland Union</h3>
                                   </div>
                                 </div>
-                                <div class = "event-image" onclick="openPopup()">
+                                <div class = "event-image" onclick="openPopup(event)">
                                     <img src="Images/image1.jpg" alt="Photo1">
                                 </div>
                                 <div class = "event-details">
@@ -85,7 +90,7 @@
                                       <img src="Images/likeButton.png" alt="like">
                                     </div>
                                   </div>
-                                    <div class = "event-name" onclick="openPopup()">
+                                    <div class = "event-name" onclick="openPopup(event)">
                                       <h2>UQU MANA OF THE PACIFIC</h2>
                                     </div>
                                     <div class = "venue">
@@ -118,7 +123,7 @@
                                   </div>
                                 </div>
                                 <!-- POP UP CONTENT -->
-                                <div class="popup-content">
+                                <div class="popup-content" id="mana-of-pacific">
                                   <button class="close-popup" type="button" onclick="closePopup()">
                                     <span class="close-button">&times;</span>
                                   </button>
@@ -159,7 +164,7 @@
                                     </div>
                                   </section>
                                 </div>
-                              </div>
+                             
                             </li>
                           
                             <li class = "event2">                           
@@ -191,6 +196,7 @@
                       <div class="map-text">Map view</div>
                     </div>
                   </div>
+                
                 </div>
                 <div class="stuff">
                   <div class="service">

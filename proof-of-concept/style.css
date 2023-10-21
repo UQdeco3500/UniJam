@@ -28,9 +28,9 @@ body {
 }
 
 .container {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
   padding: 0.5rem;
   display: -webkit-box;
   display: -moz-box;
@@ -125,7 +125,7 @@ body {
 .iphone .buttons .vol-down {
   top: 250px;
 } */
-
+/* 
 .iphone .top {
   position: absolute;
   top: 4px;
@@ -269,14 +269,15 @@ body {
 
 .iphone .bottom-bar {
   bottom: 65px;
-}
+} */
 
 .screen {
   position: absolute;
   height: 100vh;
   width: 100vw;
   margin: 0 auto;
-
+  top:0;
+  left: 0;
   overflow: hidden;
   background-color: #fff;
 }
@@ -331,7 +332,7 @@ body {
   align-items: center;
   z-index: 200;
 }
-
+/* 
 .screen .time {
   position: absolute;
   top: 8px;
@@ -453,10 +454,10 @@ body {
   -webkit-border-radius: 1px 1px 1px 1px;
   border-radius: 1px 1px 1px 1px;
   background: black;
-}
+} */
 
-.screen .service .bar:first-child {
-  height: 2px;
+/* .screen .service .bar:first-child { 
+   height: 2px;
 }
 
 .screen .service .bar:nth-child(2) {
@@ -516,12 +517,12 @@ body {
   -moz-border-radius: 1px 0 0 1px;
   -webkit-border-radius: 1px 0 0 1px;
   border-radius: 1px 0 0 1px;
-}
+} */
 
 .screen .content {
   height: 100vh;
   width: 100vw;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -529,7 +530,7 @@ body {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   -ms-flex-direction: column;
-  flex-direction: column;
+  flex-direction: column; */
   /*   -webkit-justify-content: center; */
   /*   -moz-justify-content: center; */
   /*   -ms-justify-content: center; */
@@ -540,7 +541,8 @@ body {
   /*   -ms-align-items: center; */
   /*   align-items: center;  */
   background-color: #fff;
-  z-index: 999;
+  overflow-y: auto;
+  /* z-index: 999; */
 }
 
 .screen .content #map {
@@ -559,7 +561,9 @@ body {
   -moz-border-radius: 0 4px 4px 0;
   -webkit-border-radius: 0 4px 4px 0;
   border-radius: 0 4px 4px 0;
-  z-index: 999;
+  position: relative;
+  /* z-index: 0; */
+  /* position: relative; */
   /*   border-bottom: 1px solid #333; */
 }
 
@@ -678,6 +682,27 @@ body {
 }
 
 /* ----------------------------------- */
+
+/* list view page */
+.scrollable-events {
+  overflow-y: auto;
+}
+
+.scrollable-events .all-events {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.scrollable-events .all-events .organizer {
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+
+.scrollable-events .all-events li {
+  list-style-type: none;
+}
 
 /* Landmark on map */
 .icon-landmark-1 {
@@ -1037,8 +1062,8 @@ body {
   background: white;
   width: 100vw;
   height: 100vh;
-  top: -13vh;
-  left: -11vw;
+  top: 0;
+  left: 0;
   z-index: 999;
   padding-top: 25px;
   overflow-y: auto;

@@ -23,6 +23,18 @@ function closePopup() {
     popup.remove("active");
 }
 
-function openPopup() {
+let event1 = document.querySelector(".event1");
+let event2 = document.querySelector(".event2");
+
+function openPopup(event) {
+    console.log(event);
+    let popup;
+    if (event1.contains(event.target)) {
+        console.log(true);
+        popup = document.querySelector(".event1 .popup-content").classList;
+    } else if (event2.contains(event.target)) {
+        popup = document.querySelector(".event2 .popup-content").classList;
+    }
+
     popup.add("active");
 }
