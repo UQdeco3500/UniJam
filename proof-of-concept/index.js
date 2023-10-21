@@ -26,10 +26,14 @@ function activeFunction() {
 
   if (currentEventsFilter.checked) {
     currentUrl.searchParams.set("filter", "current-events");
+    document.querySelector(".list-events h2").innerHTML = "What's On Today";
   } else if (upcomingEventsFilter.checked) {
     currentUrl.searchParams.set("filter", "upcoming-events");
+    document.querySelector(".list-events h2").innerHTML = "Upcoming Events";
   }
 
   window.history.replaceState(null, null, currentUrl);
+
+
   
 }

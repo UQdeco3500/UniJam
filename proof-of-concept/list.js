@@ -17,10 +17,20 @@
     // You can call the addBox function to add more boxes dynamically
 });*/
 
-let popup = document.querySelector(".popup-content").classList;
+// let popup = document.querySelector(".popup-content").classList;
 
-function closePopup() {
+function closePopup(event) {
+    console.log("close button clicked!");
+
+    let popup;
+    if (event1.contains(event.target)) {
+        popup = document.querySelector(".event1 .popup-content").classList;
+    } else if (event2.contains(event.target)) {
+        popup = document.querySelector(".event2 .popup-content").classList;
+    }
+
     popup.remove("active");
+    
 }
 
 let event1 = document.querySelector(".event1");
@@ -33,6 +43,7 @@ function openPopup(event) {
         console.log(true);
         popup = document.querySelector(".event1 .popup-content").classList;
     } else if (event2.contains(event.target)) {
+        console.log(false);
         popup = document.querySelector(".event2 .popup-content").classList;
     }
 
