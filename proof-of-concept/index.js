@@ -14,26 +14,3 @@ if (window.location.href.includes("map.html")) {
     activeIcon.add("active");
 
 }
-
-function activeFunction() {
-
-    const currentUrl = new URL(window.location.href);
-    console.log(currentUrl);
-
-  let currentEventsFilter = document.getElementById("current-events");
-  let upcomingEventsFilter = document.getElementById("upcoming-events");
-
-
-  if (currentEventsFilter.checked) {
-    currentUrl.searchParams.set("filter", "current-events");
-    document.querySelector(".list-events h2").innerHTML = "What's On Today";
-  } else if (upcomingEventsFilter.checked) {
-    currentUrl.searchParams.set("filter", "upcoming-events");
-    document.querySelector(".list-events h2").innerHTML = "Upcoming Events";
-  }
-
-  window.history.replaceState(null, null, currentUrl);
-
-
-  
-}
