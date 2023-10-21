@@ -54,23 +54,119 @@
                     
                     </div>
                   </div>
-                  <div class = "listView">
-                    <div class = "box">
-                        <div class = "header">
-                            <img src="Images/UQUnionLogo.jpg" alt="Logo">
-                            <h4>University of Queensland Union</h4>
-                            
-                        </div>
-                        <div class = "poster">
-                            <img src="Images/image1.jpg" alt="Photo 1">
-                        </div>
-                        <div class = "line"></div>
-                        <div class = "eventInfo">
-                          <h6>WED, 11 Oct 2023 | GREAT COURT | AT 12:00 UTC+10 </h6>
-                          <h4>UQU MANA OF THE PACIFIC</h4>
-                          <a href="#" class="book-button">Book your ticket</a>
-                        </div>
-                    </div> 
+                  <!-- 
+                    Main Screen that lists events
+                  -->
+                  <div class = "list-events">
+                    <div class = "title-header">
+                        <h1>What's On Today</h1>
+                    </div>
+                    <div class = "scrollable-events">
+                        <ul class="all-events">
+                            <li class = "event1">
+                              <div class="event-popup-clickable">
+                                <div class = "organizer">
+                                  <div class = "organizer-logo">
+                                    <img src="Images/UQUnionLogo.jpg" alt="logo">
+                                  </div>
+                                  <div class = "organizer-name">
+                                      <h3>University of Queensland Union</h3>
+                                  </div>
+                                </div>
+                                <div class = "event-image" onclick="openPopup()">
+                                    <img src="Images/image1.jpg" alt="Photo1">
+                                </div>
+                                <div class = "event-details">
+                                  <div class = "group">
+                                    <div class = "time-and-date">
+                                      <h4>WED, 11 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>
+                                    </div>
+                                    <div class = "like-button">
+                                      <img src="Images/likeButton.png" alt="like">
+                                    </div>
+                                  </div>
+                                    <div class = "event-name" onclick="openPopup()">
+                                      <h2>UQU MANA OF THE PACIFIC</h2>
+                                    </div>
+                                    <div class = "venue">
+                                        <h6>Campbell Pl, St Lucia QLD 4067, Australia</h6>
+                                    </div>
+                                  <div class = "moreinfo-book">
+                                    <div class = "more-info">
+                                      <div class = "info-image">
+                                        <img src="Images/linkButton.png" alt="link">
+                                      </div>
+                                      <div class = "more-event-info">
+                                        <a href = "#">More Info</a>
+                                      </div>
+                                    </div>
+                                    <a href="#" class="book-button">Book your ticket</a>
+                                  </div>
+                                  <div class = "below-bar">
+                                    <div class = "commentBox">
+                                      <div class = "commentImage">
+                                        <img src="Images/commentButton.png" alt="comments">
+                                      </div>
+                                      <h5>Comment</h5>
+                                    </div>
+                                    <div class = "shareBox">
+                                      <div class = "shareImage">
+                                        <img src="Images/shareButton.png" alt="share">
+                                      </div>
+                                      <h5>Share</h5>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- POP UP CONTENT -->
+                                <div class="popup-content">
+                                  <button class="close-popup" type="button" onclick="closePopup()">
+                                    <span class="close-button">&times;</span>
+                                  </button>
+                                  <section class="popup-event-details">
+                                    <div class="event-name">
+                                      <h2>MANA OF PACIFIC</h2>
+                                    </div>
+                                    <div class="popup-event-image">
+                                      <img src="Images/image1.jpg" alt="Mana of Pacific Poster">
+                                    </div>
+                                    <!-- <div class="time-and-date"> -->
+                                      <p class="time-date-location">WED, 11 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</p>
+                                    <!-- </div> -->
+                                    <div class="popup-venue">
+                                      <p>Campbell Pl, St Lucia QLD 4067, Australia</p>
+                                    </div>
+                                  </section>
+                                  <section class="previous-event-photos">
+                                    <h3>Photos of previous events</h3>
+                                    <div class="previous-event-photos">
+                                      <div class="main-image"><img src="Images/Mana of the pacific_2.jpg" alt="performers of event"/></div>
+                                      <div class="image-grid">
+                                        <!-- <div class="column"> -->
+                                          <img src="Images/Mana of the pacific_3.jpg"/>
+                                          <img src="Images/Mana of the pacific_4.jpg"/>
+                                          <img src="Images/Mana of the pacific_5.jpg"/>
+                                          <img src="Images/Mana of the pacific_6.jpg"/>
+                                          <img src="Images/Mana of the pacific_7.jpg"/>
+                                        <!-- </div>
+                                        <div class="column"> -->
+                                          <img src="Images/Mana of the pacific_8.jpg"/>
+                                          <img src="Images/Mana of the pacific_9.jpg"/>
+                                          <img src="Images/Mana of the pacific_10.jpg"/>
+                                          <img src="Images/Mana of the pacific_11.jpg"/>
+                                          <img src="Images/Mana of the pacific_12.jpg"/>
+                                        <!-- </div> -->
+                                      </div>
+                                    </div>
+                                  </section>
+                                </div>
+                              </div>
+                            </li>
+                          
+                            <li class = "event2">                           
+                            </li>
+                        </ul>
+                    </div>
+                  </div> 
                     <!-- Rectangular boxed will be dynamically added here-->
                   </div>
                   <div></div>
@@ -131,4 +227,3 @@
           <script src="index.js"></script>
     </body>
 </html>
-

@@ -16,3 +16,13 @@
 
     // You can call the addBox function to add more boxes dynamically
 });*/
+
+let popup = document.querySelector(".popup-content").classList;
+
+function closePopup() {
+    popup.remove("active");
+}
+
+function openPopup() {
+    popup.add("active");
+}
