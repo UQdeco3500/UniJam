@@ -11,6 +11,7 @@
 <body>
   <div class="screen">
     <!-- Screen content -->
+    <div class="event-popup-clickable">
     <div class="content">
       <!-- navigation bar -->
       <div class="navigation-bar">
@@ -49,15 +50,38 @@
       </div>
       <!-- End of navigation bar -->
       <!-- screen main content -->
-      <div class="icon-landmark-1">
+      <!-- <div class="icon-landmark-1">
         <img src="./images/label_union.png" alt="">
         <div class="landmark_attendee_number">50+</div>
       </div>
       <div class="icon-landmark-2">
         <img src="./images/label_union.png" alt="">
         <div class="landmark_attendee_number">50+</div>
-      </div>
+      </div> -->
       <div id="map">
+      </div>
+      <!-- POP UP CONTENT -->
+      <div class="popup-content">
+        <button class="close-popup" type="button" onclick="closePopup(event)">
+          <span class="close-button">&times;</span>
+        </button>
+        <section class="popup-event-details">
+          <div class="event-name"></div>
+          <div class="popup-event-image"></div>
+          <!-- <div class="time-and-date"> -->
+            <p class="time-date-location"></p>
+          <!-- </div> -->
+          <div class="popup-venue">
+            <p>Campbell Pl, St Lucia QLD 4067, Australia</p>
+          </div>
+        </section>
+        <section class="previous-event-photos">
+          <h3>Photos of previous events</h3>
+          <div class="previous-event-photos">
+            <div class="main-image"></div>
+            <div class="image-grid"></div>
+          </div>
+        </section>
       </div>
       <!--  -->
       <!-- Bottom tab bar -->
@@ -94,14 +118,15 @@
       </div>
       <!-- End of bottom tab bar -->
     </div>
+  </div>
     <!-- End of screen -->
-    <div class="stuff">
+    <!-- <div class="stuff">
       <div class="info">
         <div class="lock-time"> </div>
         <div class="lock-date"> </div>
       </div>
       <div class="lock-bar"></div>
-    </div>
+    </div> -->
 
   </div>
 
