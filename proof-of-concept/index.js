@@ -14,3 +14,4 @@ if (window.location.href.includes("map.html")) {
     activeIcon.add("active");
 
 }
+

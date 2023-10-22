@@ -766,6 +766,9 @@ body {
 
 }
 
+.attendees img {
+  width: 50%;
+}
 /* sign up screen */
 #sign-up {
   height: 100%;
@@ -1270,6 +1273,11 @@ body {
   color: #3EC6FF;
   padding-left: 15px;
   margin: 0;
+}
+
+.popup-content .popup-attendees img {
+  margin-left: 15px;
+  width: 35vw;
 }
 
 .popup-content .popup-venue p {
