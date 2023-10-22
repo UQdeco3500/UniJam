@@ -610,9 +610,8 @@ body {
 
 .screen .content .navigation-bar .filter-area {
   position: absolute;
-  top: 20%;
   width: 90vw;
-  height: 6vh;
+  height: 100%;
   flex-shrink: 0;
   display: flex;
   align-items:center;
