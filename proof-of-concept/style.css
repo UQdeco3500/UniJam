@@ -694,11 +694,6 @@ body {
   margin-bottom: 0;
 }
 
-.scrollable-events {
-  overflow-y: auto;
-  /* overflow-x: hidden; */
-}
-
 .scrollable-events .event-image img {
   width: 100vw;
 }
@@ -1059,7 +1054,7 @@ body {
 .box-header .list-view-organisers{
   /* border-radius: 40px; */
   /* border: 2px solid #fff; */
-  z-index: 999;
+  z-index: 1;
 }
 
 .poster {
