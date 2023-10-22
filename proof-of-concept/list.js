@@ -79,6 +79,8 @@ function activeFunction() {
     document.querySelector(".event1 .poster").innerHTML = "<img src='Images/trade-show-poster.png' alt='trade show poster'/>";
     document.querySelector(".event1 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM";
     document.querySelector(".event1 .eventInfo .event-title").innerHTML = "2023 DECO3500 Trade Show";
+    document.querySelector(".event1 .attendees").innerHTML = "<img src='Images/attendees.png'/>";
+    document.querySelector(".event1 .popup-content .popup-attendees").innerHTML = "<img src='Images/attendees.png'/>";
     document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>2023 DECO3500 Trade Show</h2>";
     document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM</h4>";
     document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/trade-show-poster.png' alt='trade show poster'>";
@@ -194,6 +196,8 @@ function activeFunction() {
     document.querySelector(".event1 .poster").innerHTML = "<img src='Images/Market day.jpeg' alt='market day poster'/>";
     document.querySelector(".event1 .eventInfo .event-time").innerHTML = "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
     document.querySelector(".event1 .eventInfo .event-title").innerHTML = "MARKET DAY";
+    document.querySelector(".event1 .attendees").innerHTML = "";
+    document.querySelector(".event1 .popup-content .popup-attendees").innerHTML = "";
     document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MARKET DAY</h2>";
     document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
     document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/Market day.jpeg' alt='Mana of Pacific Poster'>";

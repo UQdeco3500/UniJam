@@ -163,6 +163,7 @@ function displayMap() {
             eventPoster: eventMarkerFeatures[i].eventPoster,
             dateTime: eventMarkerFeatures[i].dateTime,
             venue: eventMarkerFeatures[i].venue,
+            attendees: eventMarkerFeatures[i].attendees,
             mainImage: eventMarkerFeatures[i].mainImage,
             imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
@@ -182,7 +183,7 @@ function displayMap() {
     eventMarkers.forEach(eventMarker => {
         eventMarker.addListener("click", () => {
             console.log(eventMarker.name);
-            openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+            openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.attendees, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
         });
     })
 
@@ -194,9 +195,10 @@ function displayMap() {
 
 let popup = document.querySelector(".popup-content").classList;
 
-function openMapPopup(name, dateTime, venue, poster, mainImage, imageFiles) {
+function openMapPopup(name, dateTime, venue, attendees, poster, mainImage, imageFiles) {
 
     document.querySelector(".popup-content .event-name").innerHTML = `<h2>${name}</h2>`;
+    document.querySelector(".popup-content .popup-attendees").innerHTML = attendees;
     document.querySelector(".popup-content .time-date-location").innerHTML = `<h4>${dateTime}</h4>`;
     document.querySelector(".popup-content .popup-venue").innerHTML = `<p>${venue}</p>`
     document.querySelector(".popup-content .popup-event-image").innerHTML = `<img src='Images/${poster}' alt='event Poster'>`;
@@ -281,6 +283,7 @@ function eventData(url) {
             eventPoster: "Mana of the pacific logo.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            attendees: "",
             position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
             icon: "./Images/mana-of-pacific-marker.png",
             mainImage: "Mana of the pacific_1.jpg",
@@ -303,6 +306,7 @@ function eventData(url) {
             eventPoster: "Speed Friending.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            attendees: "",
             position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
             icon: "./Images/speed-friending-marker.png",
             mainImage: "Speed Friending_1.jpg",
@@ -324,8 +328,9 @@ function eventData(url) {
             eventPoster: "trade-show-poster.png",
             dateTime: "THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM",
             venue: "Andrew N. Liveris Building - Staff House Rd, St Lucia QLD 4067",
+            attendees: "<img src='Images/attendees.png' />",
             position: new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
-            icon: "./Images/trade-show-marker.png",
+            icon: "./Images/trade-show-marker-with-attendees.png",
             mainImage: "trade-show-1.jpg",
             imageFiles: [
                 "trade-show-2.jpg",
@@ -346,6 +351,7 @@ function eventData(url) {
             eventPoster: "Market day.jpeg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            attendees: "",
             position: new google.maps.LatLng(-27.49708, 153.01364),
             icon: "./Images/market-day-marker.png",
             mainImage: "Market day_1.jpg",
@@ -368,6 +374,7 @@ function eventData(url) {
             eventPoster: "moon festival logo.jpg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            attendees: "",
             position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
             icon: "./Images/moon-festival-marker.png",
             mainImage: "moon festival_1.jpg",
@@ -387,6 +394,7 @@ function eventData(url) {
             eventPoster: "Indeopia.jpeg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            attendees: "",
             position: new google.maps.LatLng(-27.495908220583335, 153.01584029078103),
             icon: "./Images/indieopia-marker.png",
             mainImage: "Indeopia_1.jpg",
