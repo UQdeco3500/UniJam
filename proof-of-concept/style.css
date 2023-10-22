@@ -521,7 +521,7 @@ body {
 } */
 
 .screen .content {
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   /* display: -webkit-box;
   display: -moz-box;
@@ -1205,7 +1205,7 @@ body {
 }/* POPUP CONTENT */
 .event-popup-clickable {
   position: relative;
-
+  overflow-y: hidden;
   /* display: inline-block; */
 }
 
