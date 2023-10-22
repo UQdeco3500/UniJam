@@ -68,7 +68,7 @@
         <section class="popup-event-details">
           <div class="event-name"></div>
           <div class="popup-event-image"></div>
-          <div class="popup-attendees"></div>
+          <div class="popup-attendees" onclick="showAttendees()"></div>
           <!-- <div class="time-and-date"> -->
             <p class="time-date-location"></p>
           <!-- </div> -->
@@ -84,6 +84,35 @@
           </div>
         </section>
       </div>
+      <div class="attendees-popup">
+        <button class="close-attendees-button" onclick="closeAttendees()">
+          <span class="close-attendees">&times;</span>
+        </button>
+        <div class="attendees-headline">
+          <h2>Your friends who are at this event: </h2>
+        </div>
+        <section class="attendees-list">
+          <ul>
+            <li>
+              <img src="Images/shivam-user-icon.png" />
+              <p>Shivam</p>
+            </li>
+            <li>
+              <img src="Images/sharon-user-icon.png" />
+              <p>sharon</p>
+            </li>
+            <li>
+              <img src="Images/deepanshi-user-icon.png" />
+              <p>Deepanshi</p>
+            </li>
+            <li>
+              <img src="Images/mihir-user-icon.png" />
+              <p>Mihir</p>
+            </li>
+          </ul>
+        </section>
+      </div>
+
       <!--  -->
       <!-- Bottom tab bar -->
       <div class="tab-bar">
