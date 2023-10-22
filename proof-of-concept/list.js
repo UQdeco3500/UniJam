@@ -65,9 +65,17 @@ function activeFunction() {
 
 
     // Mana of the Pacific --------------------------------------------------------------------------------------------------------------------------------------------
-    document.querySelector(".event1 .event-image").innerHTML = "<img src='Images/image1.jpg' alt='uqu mana of pacific poster'/>";
-    document.querySelector(".event1 .event-details .time-and-date").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
-    document.querySelector(".event1 .event-details .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
+    // document.querySelector(".event1 .event-image").innerHTML = "<img src='Images/image1.jpg' alt='uqu mana of pacific poster'/>";
+    // document.querySelector(".event1 .event-details .time-and-date").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event1 .event-details .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
+    // document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
+    // document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/image1.jpg' alt='Mana of Pacific Poster'>";
+    // document.querySelector(".event1 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Mana of the pacific_1.jpg' alt='market day image 1'>";
+
+    document.querySelector(".event1 .poster").innerHTML = "<img src='Images/image1.jpg' alt='uqu mana of pacific poster'/>";
+    document.querySelector(".event1 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event1 .eventInfo .event-title").innerHTML = "MANA OF THE PACIFIC";
     document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
     document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
     document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/image1.jpg' alt='Mana of Pacific Poster'>";
@@ -99,9 +107,17 @@ function activeFunction() {
 
 
     // Speed Friending --------------------------------------------------------------------------------------------------------------------------------------------
-    document.querySelector(".event2 .event-image").innerHTML = "<img src='Images/Speed Friending.jpeg' alt='Speed Friending poster'/>";
-    document.querySelector(".event2 .event-details .time-and-date").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
-    document.querySelector(".event2 .event-details .event-name").innerHTML = "<h2>SPEED FRIENDING</h2>";
+    // document.querySelector(".event2 .event-image").innerHTML = "<img src='Images/Speed Friending.jpeg' alt='Speed Friending poster'/>";
+    // document.querySelector(".event2 .event-details .time-and-date").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event2 .event-details .event-name").innerHTML = "<h2>SPEED FRIENDING</h2>";
+    // document.querySelector(".event2 .popup-content .event-name").innerHTML = "<h2>SPEED FRIENDING</h2>";
+    // document.querySelector(".event2 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event2 .popup-content .popup-event-image").innerHTML = "<img src='Images/Speed Friending.jpeg' alt='Speed Friending Poster'>";
+    // document.querySelector(".event2 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Speed Friending_1.jpg' alt='speed friending image 1'>";
+
+    document.querySelector(".event2 .poster").innerHTML = "<img src='Images/Speed Friending.jpeg' alt='Speed Friending poster'/>";
+    document.querySelector(".event2 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event2 .eventInfo .event-title").innerHTML = "SPEED FRIENDING";
     document.querySelector(".event2 .popup-content .event-name").innerHTML = "<h2>SPEED FRIENDING</h2>";
     document.querySelector(".event2 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
     document.querySelector(".event2 .popup-content .popup-event-image").innerHTML = "<img src='Images/Speed Friending.jpeg' alt='Speed Friending Poster'>";
@@ -136,9 +152,17 @@ function activeFunction() {
     document.querySelector(".list-events .title-header h2").innerHTML = "Upcoming Events";
 
     // Market Day --------------------------------------------------------------------------------------------------------------------------------------------
-    document.querySelector(".event1 .event-image").innerHTML = "<img src='Images/Market day.jpeg' alt='market day poster'/>";
-    document.querySelector(".event1 .event-details .time-and-date").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
-    document.querySelector(".event1 .event-details .event-name").innerHTML = "<h2>MARKET DAY</h2>";
+    // document.querySelector(".event1 .event-image").innerHTML = "<img src='Images/Market day.jpeg' alt='market day poster'/>";
+    // document.querySelector(".event1 .event-details .time-and-date").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event1 .event-details .event-name").innerHTML = "<h2>MARKET DAY</h2>";
+    // document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MARKET DAY</h2>";
+    // document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/Market day.jpeg' alt='Mana of Pacific Poster'>";
+    // document.querySelector(".event1 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Market day_1.jpg' alt='market day image 1'>";
+
+    document.querySelector(".event1 .poster").innerHTML = "<img src='Images/Market day.jpeg' alt='market day poster'/>";
+    document.querySelector(".event1 .eventInfo .event-time").innerHTML = "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event1 .eventInfo .event-title").innerHTML = "MARKET DAY";
     document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MARKET DAY</h2>";
     document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
     document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/Market day.jpeg' alt='Mana of Pacific Poster'>";
@@ -169,9 +193,17 @@ function activeFunction() {
     // ----------------------------------------------------------------------------------------------------------------------------------------
 
     // Moon Festival --------------------------------------------------------------------------------------------------------------------------------------------
-    document.querySelector(".event2 .event-image").innerHTML = "<img src='Images/moon festival logo.jpg' alt='mmoon festival poster'/>";
-    document.querySelector(".event2 .event-details .time-and-date").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
-    document.querySelector(".event2 .event-details .event-name").innerHTML = "<h2>MOON FESTIVAL</h2>";
+    // document.querySelector(".event2 .event-image").innerHTML = "<img src='Images/moon festival logo.jpg' alt='mmoon festival poster'/>";
+    // document.querySelector(".event2 .event-details .time-and-date").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event2 .event-details .event-name").innerHTML = "<h2>MOON FESTIVAL</h2>";
+    // document.querySelector(".event2 .popup-content .event-name").innerHTML = "<h2>MOON FESTIVAL</h2>";
+    // document.querySelector(".event2 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    // document.querySelector(".event2 .popup-content .popup-event-image").innerHTML = "<img src='Images/moon festival logo.jpg' alt='Moon Festival Poster'>";
+    // document.querySelector(".event2 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/moon festival_1.jpg' alt='moon festival image 1'>";
+
+    document.querySelector(".event2 .poster").innerHTML = "<img src='Images/moon festival logo.jpg' alt='mmoon festival poster'/>";
+    document.querySelector(".event2 .eventInfo .event-time").innerHTML = "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event2 .eventInfo .event-title").innerHTML = "MOON FESTIVAL";
     document.querySelector(".event2 .popup-content .event-name").innerHTML = "<h2>MOON FESTIVAL</h2>";
     document.querySelector(".event2 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
     document.querySelector(".event2 .popup-content .popup-event-image").innerHTML = "<img src='Images/moon festival logo.jpg' alt='Moon Festival Poster'>";
