@@ -549,7 +549,8 @@ body {
 }
 
 .screen .content #map {
-  height: 100%;
+  height: 90%;
+  overflow-y: hidden;
 }
 
 /*  Navigation bar */
@@ -608,12 +609,12 @@ body {
 
 .screen .content .navigation-bar .filter-area {
   position: absolute;
-  top: 20px;
+  top: 20%;
   width: 90vw;
-  height: 5vh;
+  height: 6vh;
   flex-shrink: 0;
   display: flex;
-  align-items: center;
+  align-items:center;
   overflow-x: hidden;
 }
 
@@ -881,6 +882,7 @@ body {
   background: #FFF;
   box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.03);
   z-index: 0;
+  overflow: hidden;
 }
 
 .screen .content .tab-bar .list-view {
