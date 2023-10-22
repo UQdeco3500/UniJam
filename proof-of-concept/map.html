@@ -93,24 +93,31 @@
         </div>
         <section class="attendees-list">
           <ul>
-            <li>
+            <li class="shivam" onclick="showAttendeeEvents(event)">
               <img src="Images/shivam-user-icon.png" />
               <p>Shivam</p>
             </li>
-            <li>
+            <li class="sharon" onclick="showAttendeeEvents(event)">
               <img src="Images/sharon-user-icon.png" />
               <p>sharon</p>
             </li>
-            <li>
+            <li class="deepanshi" onclick="showAttendeeEvents(event)">
               <img src="Images/deepanshi-user-icon.png" />
               <p>Deepanshi</p>
             </li>
-            <li>
+            <li class="mihir" onclick="showAttendeeEvents(event)">
               <img src="Images/mihir-user-icon.png" />
               <p>Mihir</p>
             </li>
           </ul>
         </section>
+      </div>
+      <div class="attendee-events-popup">
+        <button class="attendee-events-popup-backbutton" onclick="closeAttendeeEvents()">
+          <span class="back-button">&#8592</span>
+        </button>
+        <div class="attendee-headline"></div>
+        <div class="attendee-events"></div>
       </div>
 
       <!--  -->
