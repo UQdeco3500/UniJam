@@ -1069,8 +1069,8 @@ body {
 }
 
 .poster img{
-  object-fit: contain;
-  max-width: 100%;
+  /* object-fit: contain; */
+  width: 100vw;
   max-height: 100%;
 
 }

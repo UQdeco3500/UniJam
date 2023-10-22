@@ -27,6 +27,8 @@ function closePopup(event) {
         popup = document.querySelector(".event1 .popup-content").classList;
     } else if (event2.contains(event.target)) {
         popup = document.querySelector(".event2 .popup-content").classList;
+    } else if (event3.contains(event.target)) {
+        popup = document.querySelector(".event3 .popup-content").classList;
     }
 
     popup.remove("active");
@@ -35,16 +37,17 @@ function closePopup(event) {
 
 let event1 = document.querySelector(".event1");
 let event2 = document.querySelector(".event2");
+let event3 = document.querySelector(".event3");
 
 function openPopup(event) {
     console.log(event);
     let popup;
     if (event1.contains(event.target)) {
-        console.log(true);
         popup = document.querySelector(".event1 .popup-content").classList;
     } else if (event2.contains(event.target)) {
-        console.log(false);
         popup = document.querySelector(".event2 .popup-content").classList;
+    } else if (event3.contains(event.target)) {
+        popup = document.querySelector(".event3 .popup-content").classList;
     }
 
     popup.add("active");
@@ -73,36 +76,32 @@ function activeFunction() {
     // document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/image1.jpg' alt='Mana of Pacific Poster'>";
     // document.querySelector(".event1 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Mana of the pacific_1.jpg' alt='market day image 1'>";
 
-    document.querySelector(".event1 .poster").innerHTML = "<img src='Images/image1.jpg' alt='uqu mana of pacific poster'/>";
-    document.querySelector(".event1 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
-    document.querySelector(".event1 .eventInfo .event-title").innerHTML = "MANA OF THE PACIFIC";
-    document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
-    document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
-    document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/image1.jpg' alt='Mana of Pacific Poster'>";
-    document.querySelector(".event1 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Mana of the pacific_1.jpg' alt='market day image 1'>";
+    document.querySelector(".event1 .poster").innerHTML = "<img src='Images/trade-show-poster.png' alt='trade show poster'/>";
+    document.querySelector(".event1 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM";
+    document.querySelector(".event1 .eventInfo .event-title").innerHTML = "2023 DECO3500 Trade Show";
+    document.querySelector(".event1 .popup-content .event-name").innerHTML = "<h2>2023 DECO3500 Trade Show</h2>";
+    document.querySelector(".event1 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM</h4>";
+    document.querySelector(".event1 .popup-content .popup-event-image").innerHTML = "<img src='Images/trade-show-poster.png' alt='trade show poster'>";
+    document.querySelector(".event1 .popup-content .popup-venue").innerHTML = "<p>Andrew N. Liveris Building - Staff House Rd, St Lucia QLD 4067</p>"
+    document.querySelector(".event1 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/trade-show-1.jpg' alt='tradeshow image 1'>";
 
-    const manaOfPacificImageFiles = [
-        "Mana of the pacific_2.jpg",
-        "Mana of the pacific_3.jpg",
-        "Mana of the pacific_4.jpg",
-        "Mana of the pacific_5.jpg",
-        "Mana of the pacific_6.jpg",
-        "Mana of the pacific_7.jpg",
-        "Mana of the pacific_8.jpg",
-        "Mana of the pacific_9.jpg",
-        "Mana of the pacific_10.jpg",
-        "Mana of the pacific_11.jpg",
-        "Mana of the pacific_12.jpg",
+    const tradeshowImageFiles = [
+        "trade-show-2.jpg",
+        "trade-show-3.jpg",
+        "trade-show-4.jpg",
+        "trade-show-5.jpg",
+        "trade-show-6.jpg",
+        "trade-show-7.jpg",
     ];
 
-    let manaOfPacificImages = "";
+    let tradeshowImages = "";
 
-    for (let i = 0; i < manaOfPacificImageFiles.length; i++) {
+    for (let i = 0; i < tradeshowImageFiles.length; i++) {
         console.log("looping through images array");
-        manaOfPacificImages += `<img src='Images/${manaOfPacificImageFiles[i]}'/>`;
+        tradeshowImages += `<img src='Images/${tradeshowImageFiles[i]}'/>`;
     }
 
-    document.querySelector(".event1 .popup-content .previous-event-photos .image-grid").innerHTML = manaOfPacificImages;
+    document.querySelector(".event1 .popup-content .previous-event-photos .image-grid").innerHTML = tradeshowImages;
     // ----------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -145,6 +144,38 @@ function activeFunction() {
 
     document.querySelector(".event2 .popup-content .previous-event-photos .image-grid").innerHTML = speedFriendingImages;
     // ----------------------------------------------------------------------------------------------------------------------------------------
+    document.querySelector(".event3 .poster").innerHTML = "<img src='Images/image1.jpg' alt='uqu mana of pacific poster'/>";
+    document.querySelector(".event3 .eventInfo .event-time").innerHTML = "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event3 .eventInfo .event-title").innerHTML = "MANA OF THE PACIFIC";
+    document.querySelector(".event3 .popup-content .event-name").innerHTML = "<h2>MANA OF THE PACIFIC</h2>";
+    document.querySelector(".event3 .popup-content .time-date-location").innerHTML = "<h4>THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    document.querySelector(".event3 .popup-content .popup-event-image").innerHTML = "<img src='Images/image1.jpg' alt='Mana of Pacific Poster'>";
+    document.querySelector(".event3 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Mana of the pacific_1.jpg' alt='market day image 1'>";
+
+    const manaOfPacificImageFiles = [
+        "Mana of the pacific_2.jpg",
+        "Mana of the pacific_3.jpg",
+        "Mana of the pacific_4.jpg",
+        "Mana of the pacific_5.jpg",
+        "Mana of the pacific_6.jpg",
+        "Mana of the pacific_7.jpg",
+        "Mana of the pacific_8.jpg",
+        "Mana of the pacific_9.jpg",
+        "Mana of the pacific_10.jpg",
+        "Mana of the pacific_11.jpg",
+        "Mana of the pacific_12.jpg",
+    ];
+
+    let manaOfPacificImages = "";
+
+    for (let i = 0; i < manaOfPacificImageFiles.length; i++) {
+        console.log("looping through images array");
+        manaOfPacificImages += `<img src='Images/${manaOfPacificImageFiles[i]}'/>`;
+    }
+
+    document.querySelector(".event1 .popup-content .previous-event-photos .image-grid").innerHTML = manaOfPacificImages;
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
 
 
   } else if (upcomingEventsFilter.checked) {
@@ -229,7 +260,38 @@ function activeFunction() {
 
     document.querySelector(".event2 .popup-content .previous-event-photos .image-grid").innerHTML = moonFestivalImages;
     // ----------------------------------------------------------------------------------------------------------------------------------------
-    
+    document.querySelector(".event3 .poster").innerHTML = "<img src='Images/Indeopia.jpeg' alt='uqu mana of pacific poster'/>";
+    document.querySelector(".event3 .eventInfo .event-time").innerHTML = "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10";
+    document.querySelector(".event3 .eventInfo .event-title").innerHTML = "INDIEOPIA - MUSIC FESTIVAL";
+    document.querySelector(".event3 .popup-content .event-name").innerHTML = "<h2>INDIEOPIA - MUSIC FESTIVAL</h2>";
+    document.querySelector(".event3 .popup-content .time-date-location").innerHTML = "<h4>FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10</h4>";
+    document.querySelector(".event3 .popup-content .popup-event-image").innerHTML = "<img src='Images/Indeopia.jpeg' alt='Indieopia Poster'>";
+    document.querySelector(".event3 .popup-content .previous-event-photos .main-image").innerHTML = "<img src='Images/Indeopia_1.jpg' alt='indieopia image 1'>";
+
+    const indieopiaImageFiles = [
+        "Indeopia_2.jpg",
+        "Indeopia_3.jpg",
+        "Indeopia_4.jpg",
+        "Indeopia_5.jpg",
+        "Indeopia_6.jpg",
+        "Indeopia_7.jpg",
+        "Indeopia_8.jpg",
+        "Indeopia_9.jpg",
+        "Indeopia_10.jpg",
+        "Indeopia_11.jpg",
+        "Indeopia_12.jpg",
+    ];
+
+    let indieopiaImages = "";
+
+    for (let i = 0; i < indieopiaImageFiles.length; i++) {
+        console.log("looping through images array");
+        indieopiaImages += `<img src='Images/${indieopiaImageFiles[i]}'/>`;
+    }
+
+    document.querySelector(".event1 .popup-content .previous-event-photos .image-grid").innerHTML = indieopiaImages;
+    // ----------------------------------------------------------------------------------------------------------------------------------------
+
 
   }
 

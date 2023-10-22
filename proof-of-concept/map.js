@@ -43,7 +43,7 @@ function activeFunction() {
   eventMarkers.forEach(eventMarker => {
     eventMarker.addListener("click", () => {
         console.log(eventMarker.name);
-        openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+        openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
     });
     })
 
@@ -78,6 +78,7 @@ function setEventMarkers() {
             name: eventMarkerFeatures[i].name,
             eventPoster: eventMarkerFeatures[i].eventPoster,
             dateTime: eventMarkerFeatures[i].dateTime,
+            venue: eventMarkerFeatures[i].venue,
             mainImage: eventMarkerFeatures[i].mainImage,
             imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
@@ -161,6 +162,7 @@ function displayMap() {
             name: eventMarkerFeatures[i].name,
             eventPoster: eventMarkerFeatures[i].eventPoster,
             dateTime: eventMarkerFeatures[i].dateTime,
+            venue: eventMarkerFeatures[i].venue,
             mainImage: eventMarkerFeatures[i].mainImage,
             imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
@@ -180,7 +182,7 @@ function displayMap() {
     eventMarkers.forEach(eventMarker => {
         eventMarker.addListener("click", () => {
             console.log(eventMarker.name);
-            openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+            openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
         });
     })
 
@@ -192,10 +194,11 @@ function displayMap() {
 
 let popup = document.querySelector(".popup-content").classList;
 
-function openMapPopup(name, dateTime, poster, mainImage, imageFiles) {
+function openMapPopup(name, dateTime, venue, poster, mainImage, imageFiles) {
 
     document.querySelector(".popup-content .event-name").innerHTML = `<h2>${name}</h2>`;
     document.querySelector(".popup-content .time-date-location").innerHTML = `<h4>${dateTime}</h4>`;
+    document.querySelector(".popup-content .popup-venue").innerHTML = `<p>${venue}</p>`
     document.querySelector(".popup-content .popup-event-image").innerHTML = `<img src='Images/${poster}' alt='event Poster'>`;
     document.querySelector(".popup-content .previous-event-photos .main-image").innerHTML = `<img src='Images/${mainImage}' alt='event main image'>`;
 
@@ -234,8 +237,17 @@ function heatMapData(url) {
     // General Purpose North
     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
     new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-    new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    // new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+    // new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
+
+    // Andrew Liveris (trade show)
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+    
   ];
 
   var upcomingEvents = [
@@ -247,6 +259,11 @@ function heatMapData(url) {
     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
     new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
+
+    // UQ Centre building
+    new google.maps.LatLng(-27.495908220583335, 153.01584029078103),
+    new google.maps.LatLng(-27.495908220583335, 153.01584029078103),
+
   ];
 
   if (url.includes("filter=current-events")) {
@@ -263,6 +280,7 @@ function eventData(url) {
             name: "Mana of the Pacific",
             eventPoster: "Mana of the pacific logo.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+            venue: "Campbell Pl, St Lucia QLD 4067, Australia",
             position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
             icon: "./Images/mana-of-pacific-marker.png",
             mainImage: "Mana of the pacific_1.jpg",
@@ -284,6 +302,7 @@ function eventData(url) {
             name: "Speed Friending",
             eventPoster: "Speed Friending.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+            venue: "Campbell Pl, St Lucia QLD 4067, Australia",
             position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
             icon: "./Images/speed-friending-marker.png",
             mainImage: "Speed Friending_1.jpg",
@@ -299,7 +318,26 @@ function eventData(url) {
                 "Speed Dating_8.jpg",
                 "Speed Dating_9.jpg",
             ]
+        },
+        {
+            name: "2023 DECO3500 Trade Show",
+            eventPoster: "trade-show-poster.png",
+            dateTime: "THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM",
+            venue: "Andrew N. Liveris Building - Staff House Rd, St Lucia QLD 4067",
+            position: new google.maps.LatLng(-27.49893949275078, 153.01392968285035),
+            icon: "./Images/trade-show-marker.png",
+            mainImage: "trade-show-1.jpg",
+            imageFiles: [
+                "trade-show-2.jpg",
+                "trade-show-3.jpg",
+                "trade-show-4.jpg",
+                "trade-show-5.jpg",
+                "trade-show-6.jpg",
+                "trade-show-7.jpg",
+                "trade-show-8.jpg",
+            ]
         }
+
     ]
 
     var upcomingEvents = [
@@ -307,6 +345,7 @@ function eventData(url) {
             name: "Market Day",
             eventPoster: "Market day.jpeg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+            venue: "Campbell Pl, St Lucia QLD 4067, Australia",
             position: new google.maps.LatLng(-27.49708, 153.01364),
             icon: "./Images/market-day-marker.png",
             mainImage: "Market day_1.jpg",
@@ -328,6 +367,7 @@ function eventData(url) {
             name: "Moon Festival",
             eventPoster: "moon festival logo.jpg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+            venue: "Campbell Pl, St Lucia QLD 4067, Australia",
             position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
             icon: "./Images/moon-festival-marker.png",
             mainImage: "moon festival_1.jpg",
@@ -340,6 +380,28 @@ function eventData(url) {
                 "moon festival_7.jpg",
                 "moon festival_8.jpg",
                 "moon festival_9.jpg",
+            ]
+        },
+        {
+            name: "Indieopia - Music Festival",
+            eventPoster: "Indeopia.jpeg",
+            dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+            venue: "Campbell Pl, St Lucia QLD 4067, Australia",
+            position: new google.maps.LatLng(-27.495908220583335, 153.01584029078103),
+            icon: "./Images/indieopia-marker.png",
+            mainImage: "Indeopia_1.jpg",
+            imageFiles: [
+                "Indeopia_2.jpg",
+                "Indeopia_3.jpg",
+                "Indeopia_4.jpg",
+                "Indeopia_5.jpg",
+                "Indeopia_6.jpg",
+                "Indeopia_7.jpg",
+                "Indeopia_8.jpg",
+                "Indeopia_9.jpg",
+                "Indeopia_10.jpg",
+                "Indeopia_11.jpg",
+                "Indeopia_12.jpg",
             ]
         }
     ]
