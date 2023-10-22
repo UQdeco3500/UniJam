@@ -15,3 +15,31 @@ if (window.location.href.includes("map.html")) {
 
 }
 
+let attendeesPopup = document.querySelector(".attendees-popup").classList;
+
+function showAttendees() {
+    attendeesPopup.add("active");
+}
+
+function closeAttendees() {
+    attendeesPopup.remove("active");
+}
+
+const attendees = [
+    {
+        name: "Shivam",
+        image: "Images/shivam-user-icon.png",
+    },
+    {
+        name: "Sharon",
+        image: "Images/sharon-user-icon.png"
+    },
+    {
+        name: "Deepanshi",
+        image: "Images/deepanshi-user-icon.png"
+    },
+    {
+        name: "Mihir",
+        image: "Images/mihir-user-icon.png"
+    }
+]

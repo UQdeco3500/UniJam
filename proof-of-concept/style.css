@@ -1227,6 +1227,43 @@ body {
   /* animation: fadeIn 0.5s; */
 }
 
+.attendees-popup {
+  visibility: hidden;
+  background: white;
+  position: absolute;
+  z-index: 999;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.attendees-popup.active {
+  visibility: visible;
+}
+
+.attendees-popup .attendees-list li {
+  display: flex;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.attendees-popup .attendees-headline {
+  font-size: smaller;
+  margin-left: 15px;
+}
+
+.attendees-popup .attendees-list li img {
+  width: 20%;
+}
+
+.attendees-popup .attendees-list li p {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -1237,13 +1274,17 @@ body {
   to {opacity: 0;}
 }
 
-.event-popup-clickable .popup-content .close-popup {
+.event-popup-clickable .popup-content .close-popup, .attendees-popup .close-attendees-button {
   background: none;
   border: none;
   margin-left: 10px;
 }
 
-.event-popup-clickable .popup-content .close-button {
+.attendees-popup .close-attendees-button {
+  margin-top: 10px;
+}
+
+.event-popup-clickable .popup-content .close-button, .attendees-popup .close-attendees {
   font-size: 40px;
 }
 
