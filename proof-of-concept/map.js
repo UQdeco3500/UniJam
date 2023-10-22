@@ -38,6 +38,15 @@ function activeFunction() {
   setHeatMap();
   setEventMarkers(currentUrl);
 
+  console.log("event markers: ", eventMarkers);
+
+  eventMarkers.forEach(eventMarker => {
+    eventMarker.addListener("click", () => {
+        console.log(eventMarker.name);
+        openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+    });
+    })
+
 }
 
 function setHeatMap() {
@@ -66,6 +75,11 @@ function setEventMarkers() {
 
     for (let i=0; i<eventMarkerFeatures.length; i++) {
         const eventMarker = new google.maps.Marker({
+            name: eventMarkerFeatures[i].name,
+            eventPoster: eventMarkerFeatures[i].eventPoster,
+            dateTime: eventMarkerFeatures[i].dateTime,
+            mainImage: eventMarkerFeatures[i].mainImage,
+            imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
             icon: eventMarkerFeatures[i].icon,
             map: map
@@ -144,20 +158,61 @@ function displayMap() {
 
     for (i=0; i<eventMarkerFeatures.length; i++) {
         const eventMarker = new google.maps.Marker({
+            name: eventMarkerFeatures[i].name,
+            eventPoster: eventMarkerFeatures[i].eventPoster,
+            dateTime: eventMarkerFeatures[i].dateTime,
+            mainImage: eventMarkerFeatures[i].mainImage,
+            imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
             icon: eventMarkerFeatures[i].icon,
-            map: map
-        });
+            map: map,
 
-        // eventMarkers --> array of google.maps.Marker objects. 
+        });
+        console.log(eventMarker.imageFiles);
+        // eventMarkers --> array of google.maps.Marker objects.
+
         eventMarkers.push(eventMarker);
-        eventMarker.setMap(map)
+        eventMarker.setMap(map);
+
+        // console.log(eventMarkerFeatures[i]);  
     };
+
+    eventMarkers.forEach(eventMarker => {
+        eventMarker.addListener("click", () => {
+            console.log(eventMarker.name);
+            openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+        });
+    })
 
   } else {
         // Browser doesn't support Geolocation
         handleLocationError(false, infoWindow, map.getCenter());
     }
+}
+
+let popup = document.querySelector(".popup-content").classList;
+
+function openMapPopup(name, dateTime, poster, mainImage, imageFiles) {
+
+    document.querySelector(".popup-content .event-name").innerHTML = `<h2>${name}</h2>`;
+    document.querySelector(".popup-content .time-date-location").innerHTML = `<h4>${dateTime}</h4>`;
+    document.querySelector(".popup-content .popup-event-image").innerHTML = `<img src='Images/${poster}' alt='event Poster'>`;
+    document.querySelector(".popup-content .previous-event-photos .main-image").innerHTML = `<img src='Images/${mainImage}' alt='event main image'>`;
+
+    let images = "";
+
+    for (let i = 0; i < imageFiles.length; i++) {
+        console.log("looping through images array");
+        images += `<img src='Images/${imageFiles[i]}'/>`;
+    }
+
+    document.querySelector(".popup-content .previous-event-photos .image-grid").innerHTML = images;
+    popup.add("active");
+
+};
+
+function closePopup() {
+    popup.remove("active");
 }
 
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -205,23 +260,87 @@ function eventData(url) {
 
     var currentEvents = [
         {
+            name: "Mana of the Pacific",
+            eventPoster: "Mana of the pacific logo.jpeg",
+            dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-            icon: "./Images/map-marker.png"
+            icon: "./Images/map-marker.png",
+            mainImage: "Mana of the pacific_1.jpg",
+            imageFiles: [
+                "Mana of the pacific_2.jpg",
+                "Mana of the pacific_3.jpg",
+                "Mana of the pacific_4.jpg",
+                "Mana of the pacific_5.jpg",
+                "Mana of the pacific_6.jpg",
+                "Mana of the pacific_7.jpg",
+                "Mana of the pacific_8.jpg",
+                "Mana of the pacific_9.jpg",
+                "Mana of the pacific_10.jpg",
+                "Mana of the pacific_11.jpg",
+                "Mana of the pacific_12.jpg",
+            ]
         },
         {
+            name: "Speed Friending",
+            eventPoster: "Speed Friending.jpeg",
+            dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-            icon: "./Images/map-marker.png"
+            icon: "./Images/map-marker.png",
+            mainImage: "Speed Friending_1.jpg",
+            imageFiles: [
+                "Speed Friending_2.jpg",
+                "Speed Dating_1.jpg",
+                "Speed Dating_2.jpg",
+                "Speed Dating_3.jpg",
+                "Speed Dating_4.jpg",
+                "Speed Dating_5.jpg",
+                "Speed Dating_6.jpg",
+                "Speed Dating_7.jpg",
+                "Speed Dating_8.jpg",
+                "Speed Dating_9.jpg",
+            ]
         }
     ]
 
     var upcomingEvents = [
         {
+            name: "Market Day",
+            eventPoster: "Market day.jpeg",
+            dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49708, 153.01364),
-            icon: "./Images/map-marker.png"
+            icon: "./Images/map-marker.png",
+            mainImage: "Market day_1.jpg",
+            imageFiles: [
+                "Market day_2.jpg",
+                "Market day_3.jpg",
+                "Market day_4.jpg",
+                "Market day_5.jpg",
+                "Market day_6.jpg",
+                "Market day_7.jpg",
+                "Market day_8.jpg",
+                "Market day_9.jpg",
+                "Market day_10.jpg",
+                "Market day_11.jpg",
+                "Market day_12.jpg"
+            ] 
         },
         {
+            name: "Moon Festival",
+            eventPoster: "moon festival logo.jpg",
+            dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-            icon: "./Images/map-marker.png"
+            icon: "./Images/map-marker.png",
+            mainImage: "moon festival_1.jpg",
+            imageFiles: [
+                "moon festival_2.jpg",
+                "moon festival_3.jpg",
+                "moon festival_4.jpg",
+                "moon festival_5.jpg",
+                "moon festival_6.jpg",
+                "moon festival_7.jpg",
+                "moon festival_8.jpg",
+                "moon festival_9.jpg",
+            ]
         }
     ]
 
