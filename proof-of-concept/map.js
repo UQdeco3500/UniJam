@@ -264,7 +264,7 @@ function eventData(url) {
             eventPoster: "Mana of the pacific logo.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.499808273879893, 153.01286430696973),
-            icon: "./Images/map-marker.png",
+            icon: "./Images/mana-of-pacific-marker.png",
             mainImage: "Mana of the pacific_1.jpg",
             imageFiles: [
                 "Mana of the pacific_2.jpg",
@@ -285,7 +285,7 @@ function eventData(url) {
             eventPoster: "Speed Friending.jpeg",
             dateTime: "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49488260229967, 153.01347467277384),
-            icon: "./Images/map-marker.png",
+            icon: "./Images/speed-friending-marker.png",
             mainImage: "Speed Friending_1.jpg",
             imageFiles: [
                 "Speed Friending_2.jpg",
@@ -308,7 +308,7 @@ function eventData(url) {
             eventPoster: "Market day.jpeg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49708, 153.01364),
-            icon: "./Images/map-marker.png",
+            icon: "./Images/market-day-marker.png",
             mainImage: "Market day_1.jpg",
             imageFiles: [
                 "Market day_2.jpg",
@@ -329,7 +329,7 @@ function eventData(url) {
             eventPoster: "moon festival logo.jpg",
             dateTime: "FRI, 27 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
             position: new google.maps.LatLng(-27.49938954223438, 153.0147954974887),
-            icon: "./Images/map-marker.png",
+            icon: "./Images/moon-festival-marker.png",
             mainImage: "moon festival_1.jpg",
             imageFiles: [
                 "moon festival_2.jpg",
