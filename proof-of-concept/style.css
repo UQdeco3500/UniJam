@@ -1382,7 +1382,9 @@ body {
 }
 
 .popup-content .previous-event-photos .image-grid img {
-  width: 50%;
+  max-width: 50vw;
+  /* width: 100vw; */
+  max-height: 100%;
   padding: 0px 4px 4px 4px;
 }
 

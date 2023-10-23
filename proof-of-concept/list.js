@@ -303,3 +303,10 @@ function activeFunction() {
   
 }
 
+// Popup alter when loading page
+
+var message = ["Your friend Mihir is at the Trade show today.","Your friend Lorna is at the Trade show today.","Your friend Ben is at the Trade show today."];
+
+var a = Math.floor(Math.random() * message.length);
+
+window.alert(message[a]);

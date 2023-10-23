@@ -418,11 +418,52 @@ function eventData(url) {
         eventMarkerFeatures = currentEvents;
     } else if (url.includes("filter=upcoming-events")) {
         eventMarkerFeatures = upcomingEvents;
-    };
-
+    } else if (url=="") {
+        eventMarkerFeatures = currentEvents;
+    }
+    
     return eventMarkerFeatures;
 }
 
 
 window.displayMap = displayMap;
 
+
+// Popup alter when loading page
+
+
+
+// function popupAlert() {
+//     var message = ["Your friend Shivam attended the Trade show today.","Your friend Rio attended the Trade show today.","Your friend Sharon attended the Trade show today."];
+
+//     var a = Math.floor(Math.random() * message.length);
+
+//     window.alert(message[a]);
+  
+//     if (confirm(a)) {
+//         openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.attendees, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+//     } else {
+//         window.displayMap = displayMap;
+//     }
+//     // document.getElementById("demo").innerHTML = txt;
+//   }
+
+var message = ["Your friend Shivam attended the Trade show today.","Your friend Rio attended the Trade show today.","Your friend Sharon attended the Trade show today."];
+
+var a = Math.floor(Math.random() * message.length);
+
+// window.alert(message[a]);
+
+if (window.confirm(message[a]))
+{
+    eventMarkerFeatures = eventData("");
+    let attendeeEvent = eventMarkerFeatures.filter(eventMarker => {
+        eventMarker.name == "2023 DECO3500 Trade Show";
+        eventMarker.position == new google.maps.LatLng(-27.49893949275078, 153.01392968285035);
+    });
+
+    openMapPopup(attendeeEvent[0].name, attendeeEvent[0].dateTime, attendeeEvent[0].venue, attendeeEvent[0].attendees, attendeeEvent[0].poster, attendeeEvent[0].mainImage, attendeeEvent[0].imageFiles);
+}
+else {
+    // window.displayMap = displayMap;
+}
