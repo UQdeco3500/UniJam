@@ -1085,7 +1085,7 @@ body {
   flex-direction: row;
 }
 
-.decision-buttons .done-button{
+#done-button{
   width: 138.387px;
   height: 39px;
   flex-shrink: 0;
@@ -1093,7 +1093,7 @@ body {
   background: #3EC6FF;
 }
 
-.decision-buttons .done-button .done{
+#done-button .done{
   display: flex;
   height: 36px;
   flex-direction: column;
