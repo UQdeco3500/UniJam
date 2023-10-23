@@ -103,4 +103,4 @@ function showAttendeeEvents(event) {
 
 function closeAttendeeEvents() {
     attendeeEvents.remove("active");
-}
+};

@@ -43,7 +43,7 @@ function activeFunction() {
   eventMarkers.forEach(eventMarker => {
     eventMarker.addListener("click", () => {
         console.log(eventMarker.name);
-        openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
+        openMapPopup(eventMarker.name, eventMarker.dateTime, eventMarker.venue, eventMarker.attendees, eventMarker.eventPoster, eventMarker.mainImage, eventMarker.imageFiles);
     });
     })
 
@@ -79,6 +79,7 @@ function setEventMarkers() {
             eventPoster: eventMarkerFeatures[i].eventPoster,
             dateTime: eventMarkerFeatures[i].dateTime,
             venue: eventMarkerFeatures[i].venue,
+            attendees: eventMarkerFeatures[i].attendees,
             mainImage: eventMarkerFeatures[i].mainImage,
             imageFiles: eventMarkerFeatures[i].imageFiles,
             position: eventMarkerFeatures[i].position,
@@ -196,6 +197,8 @@ function displayMap() {
 let popup = document.querySelector(".popup-content").classList;
 
 function openMapPopup(name, dateTime, venue, attendees, poster, mainImage, imageFiles) {
+
+    console.log(imageFiles);
 
     document.querySelector(".popup-content .event-name").innerHTML = `<h2>${name}</h2>`;
     document.querySelector(".popup-content .popup-attendees").innerHTML = attendees;
