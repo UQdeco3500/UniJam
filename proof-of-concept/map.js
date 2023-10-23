@@ -107,6 +107,7 @@ function displayMap() {
         }, 
         zoom: 17,
         disableDefaultUI: true,
+        clickableIcons: false,
     });
   
     infoWindow = new google.maps.InfoWindow();
@@ -429,3 +430,12 @@ function eventData(url) {
 
 window.displayMap = displayMap;
 
+
+// remove default landmark popups
+// book button on the event popup as well. 
+// make attendees more obvious
+// change color of the botton tab and filter tab
+// integrate with Deepanshi's work
+// When user books, add user on the other person's app. 
+
+// write context, audience, purpose and concept for tradeshow poster. 
