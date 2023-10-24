@@ -431,11 +431,11 @@ function eventData(url) {
 window.displayMap = displayMap;
 
 
-// remove default landmark popups
-// book button on the event popup as well. 
-// make attendees more obvious
-// change color of the botton tab and filter tab
-// integrate with Deepanshi's work
-// When user books, add user on the other person's app. 
+// remove default landmark popups ---DONE---
+// integrate with Deepanshi's work  ---DONE---
+// book button on the event popup as well.  ---DONE---
+// When user books, add user on the other person's app.
+// make attendees more obvious 
+// change color of the botton tab and filter tab   
 
 // write context, audience, purpose and concept for tradeshow poster. 

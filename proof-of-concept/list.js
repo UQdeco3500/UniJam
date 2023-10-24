@@ -303,3 +303,21 @@ function activeFunction() {
   
 }
 
+
+let bookButton = document.querySelector(".book-button");
+let popupBookButton = document.querySelector(".popup-book-button");
+
+function bookEvent() {
+    console.log("booked event");
+    if (bookButton.classList.contains("active")) {
+        bookButton.innerHTML = "Book your ticket";
+        popupBookButton.innerHTML = "Book your ticket";
+        bookButton.classList.remove("active");
+        popupBookButton.classList.remove("active");
+    } else {
+        bookButton.innerHTML = "Booked!";
+        popupBookButton.innerHTML = "Booked!";
+        bookButton.classList.add("active");
+        popupBookButton.classList.add("active");
+    }
+}

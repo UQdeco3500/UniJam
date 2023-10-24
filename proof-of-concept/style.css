@@ -1125,7 +1125,22 @@ body {
   background-color: #dadada; /* Adjust the line's color as needed */
 }
 
-.eventInfo .book-button {
+.popup-book-button {
+  background-color: #3EC6FF;
+  color: #fff;
+  height: 40px;
+  width: 100px;
+  /* padding: 10px 15px; */
+  font-size: 0.7rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  border: none;
+  /* position: absolute; */
+  cursor: pointer;
+  border-radius: 32px;
+}
+
+.book-button {
   background-color: #3EC6FF;
   color: #fff;
   text-decoration: none;  /*Remove underline for links */
@@ -1142,8 +1157,15 @@ body {
   border-radius: 32px;
 }
 
-.book-button:hover {
-  background-color: #c0392b; /* Change color on hover */
+.book-button.active, .popup-book-button.active {
+  background-color: green; /* Change color on hover */
+}
+
+.popup-content .row {
+  display: flex;
+  justify-content: space-between;
+  /* margin-left: 15px; */
+  margin-right: 15px;
 }
 
 .url-link {
