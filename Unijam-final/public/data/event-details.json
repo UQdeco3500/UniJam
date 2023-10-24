@@ -1,0 +1,32 @@
+[
+    {
+        "Event-organiser": "University of Queensland DECO3500 Students",
+        "Event-organiser-logo": "UQUnionLogo.jpg",
+        "Event-image": "trade-show-poster.png",
+        "Event-datetime": "THU, 26 Oct 2023 | ANDREW LIVERIS BUILDING | FROM 08:00 AM",
+        "Event-venue": "Andrew N. Liveris Building - Staff House Rd, St Lucia QLD 4067",
+        "Event-attendees": "attendees-plus.png",
+        "Event-name": "2023 DECO3500 TRADE SHOW",
+        "Event-type": "Educational"
+    },
+    {
+        "Event-organiser": "University of Queensland",
+        "Event-organiser-logo": "UQUnionLogo.jpg",
+        "Event-image": "Speed Friending.jpeg",
+        "Event-datetime": "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+        "Event-venue": "Campbell Pl, St Lucia QLD 4067, Australia",
+        "Event-attendees": "",
+        "Event-name": "SPEED FRIENDING",
+        "Event-type": "Culture"
+    },
+    {
+        "Event-organiser": "University of Queensland",
+        "Event-organiser-logo": "UQUnionLogo.jpg",
+        "Event-image": "image1.jpg",
+        "Event-datetime": "THU, 26 Oct 2023 | GREAT COURT | AT 12:00 UTC+10",
+        "Event-venue": "Campbell Pl, St Lucia QLD 4067, Australia",
+        "Event-attendees": "",
+        "Event-name": "MANA OF THE PACIFIC",
+        "Event-type": "Art"
+    }
+]
